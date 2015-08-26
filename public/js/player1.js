@@ -21,7 +21,7 @@ $(document).ready(function($){
             //------------------click events for validation btns
             $('#submitNote').on('click', Client.addNote);
             $('#submitAgu').on('click', Client.addAgu);
-            $("#submitVote").on('click', Client.addVote);
+            $("#heart").on('click', Client.addHeart);
             $('#avatar').on('click', function(){
                 if (screenfull.enabled) {
                     screenfull.request();
@@ -30,6 +30,9 @@ $(document).ready(function($){
                 }
             });
 
+            $("#showNotes").on('click', '.deletenote', function(){
+                Client.deleteNote(this.id);
+            });
             Client.dialogInit();
             Client.serviceInit();
         },
@@ -64,9 +67,9 @@ $(document).ready(function($){
                 console.log(data);
                 groupNumber = data.group;
             });
-            socket.on('chooselocation', function (data) {
-                var addresses=["https://en.wikipedia.org/wiki/Eiffel_Tower", "http://www.booking.com/hotel/fr/warwickchampselysees.html?sid=746e6f5368654dfc131922d98d1031e2;dcid=1;checkin=2015-09-01;checkout=2015-09-02;dist=0;from_sav=1;group_adults=2;sb_price_type=total;srfid=71c6f9b682ac3255ccecf5c58ffc6925464b8ef4X2;type=total;ucfs=1&"];
+            var addresses=["https://en.wikipedia.org/wiki/Eiffel_Tower", "http://www.booking.com/hotel/fr/warwickchampselysees.html?sid=746e6f5368654dfc131922d98d1031e2;dcid=1;checkin=2015-09-01;checkout=2015-09-02;dist=0;from_sav=1;group_adults=2;sb_price_type=total;srfid=71c6f9b682ac3255ccecf5c58ffc6925464b8ef4X2;type=total;ucfs=1&"];
 
+            socket.on('chooselocation', function (data) {
                 var player = data.player;
                 if(player == playerNumber) {
                     locationNumber = data.location;
@@ -101,7 +104,7 @@ $(document).ready(function($){
                     var note = notes.rows[i].doc;
                     noteContent += '<div class = "noteOfPlayer">';
                     noteContent += '<p>'+note.content+'</p>';
-                    noteContent += '<button id="'+note._id+'" onclick="Client.deleteNote(this.id)" class="btn btn-default btn-xs">'+'Effacer'+'</button>';
+                    noteContent += '<button id="'+note._id+'" class="btn btn-default btn-xs deletenote">'+'Effacer'+'</button>';
                     noteContent += '</div>';
                 }
                 $('#showNotes span').html(noteContent);
@@ -172,10 +175,12 @@ $(document).ready(function($){
                     "number": noteNumber,
                     'content':text
                 }).then(function(){
-                    $('#showNotes span').append('<div class="noteOfPlayer">'+'<p>'+text+'</p>'+'<button id='+id+'  class="btn btn-default btn-xs"onclick="Client.deleteNote(this.id)">Effacer</button>'+'</div>');
+                    $('#showNotes span').append('<div class="noteOfPlayer">'+'<p>'+text+'</p>'+'<button id='+id+'  class="btn btn-default btn-xs deletenote">Effacer</button>'+'</div>');
                     allNotes++;
                     socket.emit('addnote', {id: id, content: text, location: locationNumber, player: playerNumber, notes: allNotes});
                 });
+            }).catch(function(err){
+                console.log(err);
             });
             db.get('badge/'+groupNumber).then(function(doc){
                 console.log(doc);
@@ -245,28 +250,13 @@ $(document).ready(function($){
             textarea.val('');
         },
 
-        deleteNote: function(){
+        deleteNote: function(id){
             db.get(id).then(function(doc){
                 return db.remove(doc);
             }).then(function(){
                 $('#'+id).parent().remove();
                 allNotes--;
                 socket.emit('deletenote', {id: id, location: locationNumber, player: playerNumber, notes: allNotes});
-            });
-            db.get('badge/'+groupNumber).then(function(doc){
-                console.log(doc);
-                var note1 = doc.note1;
-                var note2 = doc.note2;
-                var note3 = doc.note3;
-                var timer = doc.timer;
-                note1--;
-                return db.put({
-                    group: groupNumber,
-                    note1: note1,
-                    note2: note2,
-                    note3: note3,
-                    timer: timer
-                }, 'badge/'+groupNumber, doc._rev);
             });
         },
 
@@ -279,7 +269,7 @@ $(document).ready(function($){
             });
         },
 
-        addVote: function(){
+        addHeart: function(){
             if(!locationNumber){
                 $('#chooseLocationDlg').dialog('open');
                 input.rating("update", 0);
@@ -287,25 +277,43 @@ $(document).ready(function($){
             }
             var id = 'vote_' + groupNumber + '_' + locationNumber + '_' + playerNumber;
             if(like == false){
-                $( "#heart" ).color("red");
+                $( '#heart' ).css('color', 'red');
                 like = true;
+                Client.updateVote(like, id);
+            }else{
+                $( '#heart' ).css('color', 'grey');
+                like = false;
                 Client.updateVote(like, id);
             }
         },
 
-        updateVote: function(){
+        updateVote: function(value, id){
             db.put({
                 _id: id,
                 "type": "vote",
                 "group": groupNumber,
                 "location": locationNumber,
                 "player": playerNumber,
-                "vote": value,
-                "timestamp": new Date().getTime()
+                "vote": value
             }).then(function() {
-                db.get(id).then(function(){
-                    socket.emit('vote', {location: locationNumber, group: groupNumber, player: playerNumber, value:value});
-                });
+                socket.emit('vote', {location: locationNumber, group: groupNumber, player: playerNumber, value:value});
+            }).catch(function(err){
+                if(err.status == 409){
+                    db.get(id).then(function(doc){
+                        console.log(doc);
+                        return db.put({
+                            _id: id,
+                            _rev: doc._rev,
+                            "type": "vote",
+                            "group": groupNumber,
+                            "location": locationNumber,
+                            "player": playerNumber,
+                            "vote": value
+                        });
+                    });
+                }else{
+                    console.log('other error');
+                }
             });
         }
     };
