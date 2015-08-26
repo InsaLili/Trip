@@ -1,2 +1,2 @@
-# mse_pouchdb
-# InsectGame
+# Trip plan
+	It's designed for our second experiment
