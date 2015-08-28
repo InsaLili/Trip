@@ -7,6 +7,7 @@ $(document).ready(function($){
     var playerNumber = 1;
     var allNotes = 0;
     var like = false;
+    var red = '#D00000';
 
     var db = new PouchDB('http://localhost:5984/trip');
     var socket = io.connect('http://localhost:8000');
@@ -14,6 +15,10 @@ $(document).ready(function($){
     // Functions =============================================================
     var Client = {
         init: function(){
+            //set avatar src based on user's choice
+            var imgSrc = ['img/player1.png','img/player2.png','img/player3.png'];
+            $('#avatar img').attr('src',imgSrc[playerNumber-1]);
+
             //------------------hide arguments part
             $('#showAgu').hide();
             $('#addAgu').hide();
@@ -67,6 +72,7 @@ $(document).ready(function($){
                 console.log(data);
                 groupNumber = data.group;
             });
+
             var addresses=["https://en.wikipedia.org/wiki/Eiffel_Tower", "http://www.booking.com/hotel/fr/warwickchampselysees.html?sid=746e6f5368654dfc131922d98d1031e2;dcid=1;checkin=2015-09-01;checkout=2015-09-02;dist=0;from_sav=1;group_adults=2;sb_price_type=total;srfid=71c6f9b682ac3255ccecf5c58ffc6925464b8ef4X2;type=total;ucfs=1&"];
 
             socket.on('chooselocation', function (data) {
@@ -108,6 +114,7 @@ $(document).ready(function($){
                     noteContent += '</div>';
                 }
                 $('#showNotes span').html(noteContent);
+                Client.changeColor();
             });
         },
 
@@ -123,13 +130,13 @@ $(document).ready(function($){
             }).then(function(vote){
                 if(vote.rows.length !== 0){
                     var voteValue = vote.rows[0].doc.vote;
-                    input.rating('update', voteValue);
-                    input.rating('refresh', {disabled: true});
-                    $('#submitVote').prop('disabled', true);
+                    if(voteValue == true){
+                        $('#heart').css('color', red);
+                    }else{
+                        $('#heart').css('color', 'grey');
+                    }
                 }else{
-                    input.rating('update', 0);
-                    input.rating('refresh', {disabled: false});
-                    $('#submitVote').removeAttr('disabled');
+                    $('#heart').css('color', 'grey');
                 }
             });
         },
@@ -176,27 +183,13 @@ $(document).ready(function($){
                     'content':text
                 }).then(function(){
                     $('#showNotes span').append('<div class="noteOfPlayer">'+'<p>'+text+'</p>'+'<button id='+id+'  class="btn btn-default btn-xs deletenote">Effacer</button>'+'</div>');
-                    allNotes++;
+                    Client.changeColor();
                     socket.emit('addnote', {id: id, content: text, location: locationNumber, player: playerNumber, notes: allNotes});
                 });
             }).catch(function(err){
                 console.log(err);
             });
-            db.get('badge/'+groupNumber).then(function(doc){
-                console.log(doc);
-                var note1 = doc.note1;
-                var note2 = doc.note2;
-                var note3 = doc.note3;
-                var timer = doc.timer;
-                note1++;
-                return db.put({
-                    group: groupNumber,
-                    note1: note1,
-                    note2: note2,
-                    note3: note3,
-                    timer: timer
-                }, 'badge/'+groupNumber, doc._rev);
-            });
+
             //clear text area
             textarea.val('');
         },
@@ -277,7 +270,7 @@ $(document).ready(function($){
             }
             var id = 'vote_' + groupNumber + '_' + locationNumber + '_' + playerNumber;
             if(like == false){
-                $( '#heart' ).css('color', 'red');
+                $( '#heart' ).css('color', red);
                 like = true;
                 Client.updateVote(like, id);
             }else{
@@ -301,6 +294,7 @@ $(document).ready(function($){
                 if(err.status == 409){
                     db.get(id).then(function(doc){
                         console.log(doc);
+                        socket.emit('vote', {location: locationNumber, group: groupNumber, player: playerNumber, value:value});
                         return db.put({
                             _id: id,
                             _rev: doc._rev,
@@ -315,6 +309,11 @@ $(document).ready(function($){
                     console.log('other error');
                 }
             });
+        },
+
+        changeColor: function(){
+            var colors = [['#E0F2F1','#009688'], ['#F1F8E9','#8BC34A'], ['#FFF3E0','#FF9800']];
+            $('#note p').css({'background-color': colors[playerNumber-1][0],'color': colors[playerNumber-1][1]});
         }
     };
 
