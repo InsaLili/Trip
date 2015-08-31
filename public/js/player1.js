@@ -73,7 +73,7 @@ $(document).ready(function($){
                 groupNumber = data.group;
             });
 
-            var addresses=["https://en.wikipedia.org/wiki/Eiffel_Tower", "http://www.booking.com/hotel/fr/warwickchampselysees.html?sid=746e6f5368654dfc131922d98d1031e2;dcid=1;checkin=2015-09-01;checkout=2015-09-02;dist=0;from_sav=1;group_adults=2;sb_price_type=total;srfid=71c6f9b682ac3255ccecf5c58ffc6925464b8ef4X2;type=total;ucfs=1&"];
+            var addresses=['https://fr.wikipedia.org/wiki/Metropolitan_Museum_of_Art', 'https://fr.wikipedia.org/wiki/Central_Park','https://fr.wikipedia.org/wiki/Broadway','https://fr.wikipedia.org/wiki/Empire_State_Building'];
 
             socket.on('chooselocation', function (data) {
                 var player = data.player;

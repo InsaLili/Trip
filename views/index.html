@@ -6,16 +6,18 @@
     <link rel="stylesheet" media="screen" href="css/bootstrap.min.css">
     <link rel="stylesheet" media="screen" href="css/media.css">
     <link rel="stylesheet" media="screen" href="jquery-ui-1.11.4/jquery-ui.css">
-    <link href='css/mapbox.css' rel='stylesheet' />
     <link rel="stylesheet" media="screen" href="css/main.css">
     <title>Map</title>
 </head>
 <body>
 <div id="appLayer">
-    <div id="status" class="container">
+    <div id="status">
         <!--Show tasks of each step-->
         <div id="tasks" class="kit">
             <h1>Plan your trip</h1>
+        </div>
+        <div id="filter" class="kit">
+            <span class="glyphicon glyphicon-heart grey" id="heart"></span>
         </div>
         <!--timer-->
         <div id="counter" class="kit">

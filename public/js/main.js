@@ -10,12 +10,34 @@ $(document).ready(function() {
     var db = new PouchDB('http://localhost:5984/trip');
     var socket = io.connect('http://localhost:8000');
 
+    var map;
+
     var groupNumber = 1;
     var chosenNumber = 0;
     var aguFlag = false;
-    var locationAmount = 4;
-    var locationNames = ['Location 1', '2', '3', '4'];
-
+    var locationAmount = 5;
+    var attractionAmount = 15;
+    var filter = false;
+    var markers = [];
+    var locationNames = ['Metropolitan Museum of Art', 'Central Park', 'Broadway', 'Empire State Building','Museum of Modern Art','Museum of Natural History','Statue of Liberty','Fifth Avenue','New York Public Library','Times Square','Top of the Rock',"St. Patrick's Cathedral",'Brooklyn Bridge','Ground Zero','United Nations Headquarters','Courtyard by Marriott'];
+    var locationCoordinates = [
+        [40.7794366,-73.963244],
+        [40.7828647,-73.9653551],
+        [40.7818015,-73.9811689],
+        [40.7484404,-73.9856554],
+        [40.7614327,-73.9776216],
+        [40.7813241,-73.9739882],
+        [40.6892494,-74.0445004],
+        [40.7318461,-73.9966758],
+        [40.7531823,-73.9822534],
+        [40.758895,-73.985131],
+        [40.7592487,-73.9793369],
+        [40.7584653,-73.9759927],
+        [40.7060855,-73.9968643],
+        [40.7119878,-74.0104079],
+        [40.7488758,-73.9680091],
+        [40.7643934,-73.9826075]
+    ];
     var red = '#D00000';
 
     var Server = {
@@ -33,7 +55,16 @@ $(document).ready(function() {
             for(var i=0; i<locationAmount; i++){
                 var name = locationNames[i];
                 var num = i+1;
-                $('.locations').append('<div class="location" id="location'+num+'"></div>');
+                var leftOffset, topOffset;
+                if(i<attractionAmount){
+                    $('.locations').append('<div class="location attractions" id="location'+num+'"></div>');
+                    leftOffset = i*60+100;
+                    topOffset = 100;
+                }else{
+                    $('.locations').append('<div class="location hotels" id="location'+num+'"></div>');
+                    leftOffset = (i-attractionAmount)*60+100;
+                    topOffset = 500;
+                }
                 var $currentLocation = $('#location'+num);
 
                 var title = '<div class="locationTitle"><h3>'+name+'</h3></div>';
@@ -46,17 +77,23 @@ $(document).ready(function() {
 
                 $currentLocation.append(title);
                 $currentLocation.append(content);
-
-                //------------------Enable multi-touch of location cards
-                $('.location').touch();
-                $('.chooseLocation').hide();
-                $('.visualPlayer').hide();
-
-                //off('click') insure the click only be detected once a time
-                $('body').off('click').on('click', '.markerBtn', function(){
-                    Server.chooseLocation(this);
-                });
+                $currentLocation.offset({top: topOffset, left:leftOffset});
             }
+
+            //------------------Enable multi-touch of location cards
+            $('.location').touch();
+            $('.chooseLocation').hide();
+            $('.visualPlayer').hide();
+
+            //off('click') insure the click only be detected once a time
+            $('body').off('click').on('click', '.markerBtn', function(){
+                Server.chooseLocation(this);
+            });
+
+            $('#filter span').on('click', Server.filtrateLocation);
+//            setTimeout(function(){
+//
+//            },)
         },
 
         //------------------Initialize each dialog
@@ -206,13 +243,7 @@ $(document).ready(function() {
         },
 
         mapInit: function () {
-            //    eight locations' coordinates
-            var locations = [
-                [48.8583701, 2.2944813],
-                [48.8737917, 2.2950275],
-                [48.8606111, 2.337644],
-                [48.8529682, 2.3499021],
-            ];
+
             var message = [];
 
             //        info in the pop-up window
@@ -222,29 +253,34 @@ $(document).ready(function() {
                 message[i]= '<div id="marker'+num+'"><h3>'+name+'</h3><img class= "markerImg" src="/img/place'+num+'.jpg"><button type="button" class="btn player1 markerBtn" value="'+num+',1"><img src="/img/player1.png"></button><button type="button" class="btn player2 markerBtn" value="'+num+',2"><img src="/img/player2.png"></button><button type="button" class="btn player3 markerBtn" value="'+num+',3"><img src="/img/player3.png"></button></div>';
             }
 
-            var markers = [];
             //    propoties of the map
             var mapProp = {
-                center: new google.maps.LatLng(48.8588589, 2.3470599),
+                center: new google.maps.LatLng(40.7504877,-73.9839238),
                 zoom: 12,
                 mapTypeId: google.maps.MapTypeId.ROADMAP
             };
 
             //    draw the map on DOM, which id is "googleMap"
-            var map = new google.maps.Map(document.getElementById("map"), mapProp);
+            map = new google.maps.Map(document.getElementById("map"), mapProp);
 
             //      draw markers
-            for (i = 0; i < locations.length; i++) {
-                var latitude = parseFloat(locations[i][0]);
-                var longitude = parseFloat(locations[i][1]);
+            for (i = 0; i < locationAmount; i++) {
+                var latitude = parseFloat(locationCoordinates[i][0]);
+                var longitude = parseFloat(locationCoordinates[i][1]);
                 var location = new google.maps.LatLng(latitude, longitude);
+                var image;
+                if(i<attractionAmount){
+                    image = 'img/attraction.png'
+                }else{
+                    image = 'img/hotel.png'
+                }
                 var marker = new google.maps.Marker({
-                    position: location
+                    position: location,
+                    icon: image
                 });
                 marker.setMap(map);
                 var locationNum = i + 1;
                 marker.metadata = {id: "location" + locationNum};
-                //        marker.metadata.id = "location1";
                 marker.setTitle((i + 1).toString());
                 markers.push(marker);
                 Server.attachMessage(marker, i, message);
@@ -260,6 +296,12 @@ $(document).ready(function() {
             google.maps.event.addListener(marker, 'click', function() {
                 infowindow.open(marker.get('map'), marker);
             });
+        },
+
+        setMapOnAll: function(map){
+            for(var i=0;i<locationAmount;i++){
+                markers[i].setMap(map);
+            }
         },
 
         //-----------------Add users' notes to the location cards
@@ -302,8 +344,8 @@ $(document).ready(function() {
             db.allDocs({
                 include_docs: true,
                 attachements: true,
-                startkey: startKey+'_1',
-                endkey: startKey+'_4\uffff'
+                startkey: startKey,
+                endkey: startKey+'\uffff'
             }).then(function(votes){
                 for(var i = 0; i < votes.rows.length; i++) {
                     var player = votes.rows[i].doc.player;
@@ -318,36 +360,34 @@ $(document).ready(function() {
         },
 
         //-----------------Add rating results to location card
-        attachVotes: function(event){
-        var startKey = 'vote_'+groupNumber;
-            db.allDocs({
-                include_docs: true,
-                attachements: true,
-                startkey: startKey,
-                endkey: startKey+'\uffff'
-            }).then(function(votes){
-                var allVotes = [0,0,0,0,0,0,0,0], voteAvg = [0,0,0,0,0,0,0,0];
-                for(var i = 0; i < votes.rows.length; i++) {
-                    var location = parseInt(votes.rows[i].doc.location);
-                    allVotes[location-1] += parseInt(votes.rows[i].doc.vote);
-                }
-                voteAvg[0] = Math.round(allVotes[0]/3);
-                voteAvg[1] = Math.round(allVotes[1]/3);
-                voteAvg[2] = Math.round(allVotes[2]/3);
-                voteAvg[3] = Math.round(allVotes[3]/3);
-                voteAvg[4] = Math.round(allVotes[4]/3);
-                voteAvg[5] = Math.round(allVotes[5]/3);
-                voteAvg[6] = Math.round(allVotes[6]/3);
-                voteAvg[7] = Math.round(allVotes[7]/3);
-                $('#input1').rating('update', voteAvg[0]);
-                $('#input2').rating('update', voteAvg[1]);
-                $('#input3').rating('update', voteAvg[2]);
-                $('#input4').rating('update', voteAvg[3]);
-                $('#input5').rating('update', voteAvg[4]);
-                $('#input6').rating('update', voteAvg[5]);
-                $('#input7').rating('update', voteAvg[6]);
-                $('#input8').rating('update', voteAvg[7]);
-            });
+        filtrateLocation: function(){
+            if(filter == false){
+                Server.setMapOnAll(null);
+                $( '#heart' ).css('color', red);
+                filter = true;
+                $('.location').hide();
+                var startKey = 'vote_'+groupNumber;
+                db.allDocs({
+                    include_docs: true,
+                    attachements: true,
+                    startkey: startKey,
+                    endkey: startKey+'\uffff'
+                }).then(function(votes){
+                    for(var i = 0; i < votes.rows.length; i++) {
+                        var doc = votes.rows[i].doc;
+                        if(doc.vote == true){
+                            var location = doc.location;
+                            $('#location'+location).show();
+                            markers[location-1].setMap(map);
+                        }
+                    }
+                });
+            }else{
+                Server.setMapOnAll(map);
+                $( '#heart' ).css('color', 'grey');
+                filter = false;
+                $('.location').show();
+            }
         },
 
         chooseLocation: function(element){

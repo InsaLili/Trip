@@ -473,3 +473,33 @@
 {"location":1,"group":1,"player":1,"value":true,"level":"info","message":"vote for location","timestamp":"2015-08-28T13:41:58.893Z"}
 {"location":1,"group":1,"player":1,"value":false,"level":"info","message":"vote for location","timestamp":"2015-08-28T13:41:59.613Z"}
 {"location":1,"group":1,"player":1,"value":true,"level":"info","message":"vote for location","timestamp":"2015-08-28T13:42:01.179Z"}
+{"location":1,"player":1,"group":1,"aguflag":false,"level":"info","message":"choose the location","timestamp":"2015-08-30T13:31:31.865Z"}
+{"location":1,"player":1,"group":1,"aguflag":false,"level":"info","message":"choose the location","timestamp":"2015-08-30T13:32:15.796Z"}
+{"location":1,"player":2,"group":1,"aguflag":false,"level":"info","message":"choose the location","timestamp":"2015-08-30T13:32:26.098Z"}
+{"location":1,"player":1,"group":1,"aguflag":false,"level":"info","message":"choose the location","timestamp":"2015-08-30T13:32:38.576Z"}
+{"location":1,"player":1,"group":1,"aguflag":false,"level":"info","message":"choose the location","timestamp":"2015-08-30T13:33:04.950Z"}
+{"location":1,"player":1,"group":1,"aguflag":false,"level":"info","message":"choose the location","timestamp":"2015-08-30T13:34:01.168Z"}
+{"location":1,"player":1,"group":1,"aguflag":false,"level":"info","message":"choose the location","timestamp":"2015-08-30T13:34:55.670Z"}
+{"location":1,"player":1,"group":1,"aguflag":false,"level":"info","message":"choose the location","timestamp":"2015-08-30T13:36:00.621Z"}
+{"location":1,"group":1,"player":1,"value":true,"level":"info","message":"vote for location","timestamp":"2015-08-30T13:36:36.832Z"}
+{"location":1,"group":1,"player":1,"value":false,"level":"info","message":"vote for location","timestamp":"2015-08-30T13:36:37.419Z"}
+{"location":1,"player":1,"group":1,"aguflag":false,"level":"info","message":"choose the location","timestamp":"2015-08-30T20:26:25.526Z"}
+{"location":1,"player":1,"group":1,"aguflag":false,"level":"info","message":"choose the location","timestamp":"2015-08-31T13:38:37.401Z"}
+{"location":8,"player":1,"group":1,"aguflag":false,"level":"info","message":"choose the location","timestamp":"2015-08-31T13:38:42.056Z"}
+{"location":8,"group":1,"player":1,"value":true,"level":"info","message":"vote for location","timestamp":"2015-08-31T13:38:45.687Z"}
+{"location":8,"group":1,"player":1,"value":false,"level":"info","message":"vote for location","timestamp":"2015-08-31T13:39:58.105Z"}
+{"location":8,"group":1,"player":1,"value":true,"level":"info","message":"vote for location","timestamp":"2015-08-31T13:40:01.405Z"}
+{"location":14,"player":1,"group":1,"aguflag":false,"level":"info","message":"choose the location","timestamp":"2015-08-31T13:43:58.582Z"}
+{"location":14,"group":1,"player":1,"value":false,"level":"info","message":"vote for location","timestamp":"2015-08-31T13:44:03.356Z"}
+{"location":14,"group":1,"player":1,"value":true,"level":"info","message":"vote for location","timestamp":"2015-08-31T13:44:04.078Z"}
+{"location":16,"player":1,"group":1,"aguflag":false,"level":"info","message":"choose the location","timestamp":"2015-08-31T13:44:22.040Z"}
+{"location":16,"group":1,"player":1,"value":false,"level":"info","message":"vote for location","timestamp":"2015-08-31T13:44:24.942Z"}
+{"location":16,"group":1,"player":1,"value":true,"level":"info","message":"vote for location","timestamp":"2015-08-31T13:44:26.405Z"}
+{"location":1,"player":1,"group":1,"aguflag":false,"level":"info","message":"choose the location","timestamp":"2015-08-31T14:15:09.202Z"}
+{"location":1,"player":1,"group":1,"aguflag":false,"level":"info","message":"choose the location","timestamp":"2015-08-31T14:16:51.160Z"}
+{"id":"note_1_1_1_5","location":1,"player":1,"notes":-1,"level":"info","message":"delete note","timestamp":"2015-08-31T15:08:08.255Z"}
+{"id":"note_1_1_1_6","location":1,"player":1,"notes":-2,"level":"info","message":"delete note","timestamp":"2015-08-31T15:08:08.690Z"}
+{"location":1,"player":1,"group":1,"aguflag":false,"level":"info","message":"choose the location","timestamp":"2015-08-31T15:09:23.870Z"}
+{"location":8,"player":1,"group":1,"aguflag":false,"level":"info","message":"choose the location","timestamp":"2015-08-31T15:09:30.308Z"}
+{"location":14,"player":1,"group":1,"aguflag":false,"level":"info","message":"choose the location","timestamp":"2015-08-31T15:09:47.036Z"}
+{"location":1,"player":1,"group":1,"aguflag":false,"level":"info","message":"choose the location","timestamp":"2015-08-31T15:10:02.600Z"}
