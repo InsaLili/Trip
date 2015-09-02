@@ -43,26 +43,31 @@ h1{
     background-color: #424242;
     box-shadow: 0 13px 25px 0 rgba(0, 0, 0, 0.3);
 }
+#hidebutton{
+    width: 5%;
+    float: left;
+    margin-left: 1%;
+}
 #filter{
     width: 5%;
     float: left;
     margin-left: 1%;
 }
-#filter .glyphicon-heart{
-    margin-left: 15px;
-    margin-top: 20px;
-    font-size: 3em;
+#filter .glyphicon-heart, #hidebutton .glyphicon-search{
+    margin-left: 20px;
+    margin-top: 15px;
+    font-size: 3.5em;
 }
 #tasks{
     margin-left: 1%;
     float: left;
-    width: 80%;
+    width: 75%;
 }
 
 #counter{
     float: right;
     margin-right: 1%;
-    width: 11%;
+    width: 10%;
 }
 #timer,#timer2,#timer3 {
     width: 145px;
@@ -80,8 +85,8 @@ h1{
 .location{
     position: absolute;
     z-index: 1;
-    width: 400px;
-    height: 350px;
+    width: 350px;
+    height: 300px;
     overflow: visible;
     border-radius: 15px;
     box-shadow: 0 13px 25px 0 rgba(0, 0, 0, 0.3);
@@ -120,7 +125,7 @@ h1{
 .vote{
     position: absolute;
     top: 60px;
-    width: 185px;
+    width: 160px;
     height: 110px;
     margin-top: 10px;
     margin-left: 15px;
@@ -129,13 +134,13 @@ h1{
 .voteId{
     float: left;
     width: 35px;
-    margin-right: 20px;
+    margin-right: 10px;
 }
 .voteId img{
     width: 100%;
 }
 .locations span.glyphicon-heart {
-    margin-right: 20px;
+    margin-right: 10px;
     margin-top: 10px;
     float: left;
     font-size: 2.5em;
@@ -147,16 +152,15 @@ h1{
 .location .visualPlayers{
     position: absolute;
     top: 70px;
-    left: 200px;
-    width: 190px;
+    left: 190px;
+    width: 180px;
     height: 110px;
-    margin-left: 15px;
 }
 
 .location .visualPlayers .visualPlayer{
     float: left;
-    width: 48px;
-    height: 48px;
+    width: 40px;
+    height: 40px;
     margin-top: 10px;
     margin-right: 10px;
 }
@@ -175,7 +179,7 @@ h1{
 }
 
 .location .locationContent .note{
-    width: 370px;
+    width: 320px;
     margin-left: 15px;
     margin-top: 10px;
     position: absolute;
@@ -270,4 +274,7 @@ h1{
 }
 .red{
     color: #D00000;
+}
+.blue{
+    color: #1c94c4;
 }

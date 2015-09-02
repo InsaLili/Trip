@@ -5,13 +5,16 @@
 
 html{
     width: 100%;
-    height: 526px;
+    height: 600px;
     background-color: #fff;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 body{
     width: 100%;
     height: 100%;
-    margin-top:20px;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 p, table{
@@ -24,32 +27,32 @@ p, table{
 
 #locationInfo{
     float: left;
-    width: 750px;
-    height: 540px;
-    background-color: #fff;
-    margin-top: 10px;
+    width: 700px;
+    height: 550px;
+    background-color: #FAFAFA;
+    margin-top: 20px;
     margin-left: 10px;
     margin-bottom: 10px;
     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3);
     /*box-shadow: 10px 10px 5px #888888;*/
 }
 
-#wrap { width: 750px; height: 540px; padding: 0; }
-#frame { width: 1000px; height: 720px;}
+#wrap { width: 700px; height: 550px; padding: 0; }
+#frame { width: 1000px; height: 785px;}
 #frame {
-    -ms-zoom: 0.75;
-    -moz-transform: scale(0.75);
+    -ms-zoom: 0.70;
+    -moz-transform: scale(0.7);
     -moz-transform-origin: 0 0;
-    -o-transform: scale(0.75);
+    -o-transform: scale(0.7);
     -o-transform-origin: 0 0;
-    -webkit-transform: scale(0.75);
+    -webkit-transform: scale(0.7);
     -webkit-transform-origin: 0 0;
 }
 #personalInfo{
     float: left;
     width: 220px;
-    height: 540px;
-    margin-top: 10px;
+    height: 550px;
+    margin-top: 20px;
     margin-left: 10px;
     background-color: #FAFAFA;
     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3);

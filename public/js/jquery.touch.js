@@ -158,6 +158,13 @@
         } else {
             this.elem.style.webkitTransform = this.elem.style.MozTransform = this.elem.style.msTransform = this.elem.style.OTransform = this.elem.style.transform = myTransform;
         }
+
+        var currentScale=this.$elem.getMatrix(0);
+        var maxX = window.innerWidth - this.$elem.width()*currentScale;
+        var maxY = window.innerHeight - this.$elem.height()*currentScale;
+        var offsetLeft = Math.min(Math.max(this.$elem.offset().left, 0), maxX);
+        var offsetTop = Math.min(Math.max(this.$elem.offset().top, 0), maxY);
+        this.$elem.offset({top: offsetTop, left: offsetLeft});
     };
 
     Touch.prototype.touchend = function(e) {

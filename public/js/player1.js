@@ -9,9 +9,10 @@ $(document).ready(function($){
     var like = false;
     var red = '#D00000';
 
+//    var db = new PouchDB('http://134.214.198.102:5984/trip');
     var db = new PouchDB('http://localhost:5984/trip');
+//    var socket = io.connect('http://134.214.198.102:8000');
     var socket = io.connect('http://localhost:8000');
-
     // Functions =============================================================
     var Client = {
         init: function(){
@@ -73,7 +74,29 @@ $(document).ready(function($){
                 groupNumber = data.group;
             });
 
-            var addresses=['https://fr.wikipedia.org/wiki/Metropolitan_Museum_of_Art', 'https://fr.wikipedia.org/wiki/Central_Park','https://fr.wikipedia.org/wiki/Broadway','https://fr.wikipedia.org/wiki/Empire_State_Building'];
+            var addresses=['http://www.viatorcom.fr/fr/7379/New-York-attractions/The-Cloisters/d687-a8773',
+                'http://www.viatorcom.fr/fr/7379/New-York-attractions/Central-Park-Les-attractions-de-New-York-city/d687-a1283',
+                'http://www.viatorcom.fr/fr/7379/New-York-attractions/Broadway/d687-a18',
+                'http://www.viatorcom.fr/fr/7379/tours/New-York/Billets-pour-lEmpire-State-Building-Billets-pour-lobservatoire-et-billets-coupe-file-facultatifs/d687-2194EMPIRE',
+                'http://www.viatorcom.fr/fr/7379/New-York-attractions/Museum-of-Modern-Art-MoMA/d687-a1299',
+                'http://www.viatorcom.fr/fr/7379/New-York-attractions/Ligne-dhorizon-de-New-York/d687-a15125',
+                'http://www.viatorcom.fr/fr/7379/New-York-attractions/Statue-de-la-Liberte/d687-a16',
+                'http://www.viatorcom.fr/fr/7379/New-York-attractions/Cinquieme-Avenue/d687-a8774',
+                'http://www.viatorcom.fr/fr/7379/New-York-attractions/New-York-Public-Library/d687-a9793',
+                'http://www.viatorcom.fr/fr/7379/New-York-attractions/Times-Square/d687-a1272',
+                'http://www.viatorcom.fr/fr/7379/tours/New-York/New-York-terrasse-panoramique-Top-of-the-Rock/d687-3784TOPROCK',
+                'http://www.viatorcom.fr/fr/7379/New-York-attractions/Cathedrale-Saint-Patrick/d687-a8775',
+                'http://www.viatorcom.fr/fr/7379/New-York-attractions/Brooklyn/d687-a68',
+                'http://www.viatorcom.fr/fr/7379/tours/New-York/Entree-au-musee-du-Memorial-du-11-septembre/d687-7195SEPT11',
+                'http://www.viatorcom.fr/fr/7379/tours/New-York/Musee-americain-dHistoire-naturelle-American-Museum-of-Natural-History/d687-2396AMNH',
+                'http://www.booking.com/hotel/us/indigo-new-york-city.html?checkin=2015-12-25;checkout=2015-12-26',//place16
+                'http://www.booking.com/hotel/us/harlem-ymca.fr.html?checkin=2015-12-25;checkout=2015-12-26',
+                'http://www.booking.com/hotel/us/herald-square.html?checkin=2015-12-25;checkout=2015-12-26',
+                'http://www.booking.com/hotel/us/broadway-hostel.html?sid=d9792821e277b223efea4bc86338dd10;dcid=4;checkin=2015-12-25&checkout=2015-12-26&dist=0&group_adults=2&sb_price_type=total&type=total&',
+                'http://www.booking.com/hotel/us/hilton-garden-inn-new-york-midtown-park-avenue.fr.html?checkin=2015-12-25;checkout=2015-12-26',
+                'http://www.booking.com/hotel/us/room-mate-grace.fr.html?checkin=2015-12-25;checkout=2015-12-26;',
+                'http://www.booking.com/hotel/us/doubletree-metropolitan.html?sid=d9792821e277b223efea4bc86338dd10;dcid=4;checkin=2015-12-25&checkout=2015-12-26&dist=0&group_adults=2&sb_price_type=total&type=total&',
+                'http://www.booking.com/hotel/us/new-york-marriott-marquis.html?checkin=2015-12-25;checkout=2015-12-26'];
 
             socket.on('chooselocation', function (data) {
                 var player = data.player;

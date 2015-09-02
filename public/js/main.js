@@ -7,7 +7,9 @@ $(document).ready(function() {
         return false;
     });
 
+//    var db = new PouchDB('http://134.214.198.102:5984/trip');
     var db = new PouchDB('http://localhost:5984/trip');
+//    var socket = io.connect('http://134.214.198.102:8000');
     var socket = io.connect('http://localhost:8000');
 
     var map;
@@ -15,30 +17,62 @@ $(document).ready(function() {
     var groupNumber = 1;
     var chosenNumber = 0;
     var aguFlag = false;
-    var locationAmount = 5;
+    var locationAmount = 23;
     var attractionAmount = 15;
+    var hide=false;
     var filter = false;
     var markers = [];
-    var locationNames = ['Metropolitan Museum of Art', 'Central Park', 'Broadway', 'Empire State Building','Museum of Modern Art','Museum of Natural History','Statue of Liberty','Fifth Avenue','New York Public Library','Times Square','Top of the Rock',"St. Patrick's Cathedral",'Brooklyn Bridge','Ground Zero','United Nations Headquarters','Courtyard by Marriott'];
+    var locationNames = [
+        'The Cloisters',
+        'Central Park',
+        'Broadway',
+        'Empire State Building',
+        'Museum of Modern Art',
+        'New York skyline',
+        'Statue of Liberty',
+        'Fifth Avenue',
+        'New York Public Library',
+        'Times Square',
+        'Top of the Rock',
+        "St. Patrick's Cathedral",
+        'Brooklyn',
+        '9/11 Memorial',
+        'Museum of Natural History',
+        'Hotel Indigo - Chelsea', //hotel, place16
+        'Harlem YMCA',
+        'Herald Square Hotel',
+        'Broadway Hotel',
+        'Hilton Garden Inn',
+        'Room Mate Grace',
+        'DoubleTree',
+        'New York Marriott Marquis'];
     var locationCoordinates = [
-        [40.7794366,-73.963244],
+        [40.8648628,-73.9317274],
         [40.7828647,-73.9653551],
         [40.7818015,-73.9811689],
         [40.7484404,-73.9856554],
         [40.7614327,-73.9776216],
-        [40.7813241,-73.9739882],
+        [40.7015699,-74.0091314],
         [40.6892494,-74.0445004],
         [40.7318461,-73.9966758],
         [40.7531823,-73.9822534],
         [40.758895,-73.985131],
         [40.7592487,-73.9793369],
         [40.7584653,-73.9759927],
-        [40.7060855,-73.9968643],
-        [40.7119878,-74.0104079],
-        [40.7488758,-73.9680091],
-        [40.7643934,-73.9826075]
+        [40.645244,-73.9449975],
+        [40.7114998,-74.0132725],
+        [40.7813241,-73.9739882],
+        [40.746761,-73.991731],//place16
+        [40.8147773,-73.9429932],
+        [40.7889031,-73.9751046],
+        [40.7979427,-73.9699991],
+        [40.746876,-73.9823115],
+        [40.7574278,-73.9838552],
+        [40.756633,-73.971413],
+        [40.758521,-73.98601]
     ];
     var red = '#D00000';
+    var blue= '#1c94c4';
 
     var Server = {
         init: function () {
@@ -58,12 +92,12 @@ $(document).ready(function() {
                 var leftOffset, topOffset;
                 if(i<attractionAmount){
                     $('.locations').append('<div class="location attractions" id="location'+num+'"></div>');
-                    leftOffset = i*60+100;
+                    leftOffset = i*90+100;
                     topOffset = 100;
                 }else{
                     $('.locations').append('<div class="location hotels" id="location'+num+'"></div>');
-                    leftOffset = (i-attractionAmount)*60+100;
-                    topOffset = 500;
+                    leftOffset = (i-attractionAmount)*90+100;
+                    topOffset = 600;
                 }
                 var $currentLocation = $('#location'+num);
 
@@ -91,6 +125,7 @@ $(document).ready(function() {
             });
 
             $('#filter span').on('click', Server.filtrateLocation);
+            $('#hidebutton span').on('click',Server.hideLocation);
 //            setTimeout(function(){
 //
 //            },)
@@ -386,7 +421,23 @@ $(document).ready(function() {
                 Server.setMapOnAll(map);
                 $( '#heart' ).css('color', 'grey');
                 filter = false;
+                if(hide==false){
+                    $('.location').show();
+                }else{
+                    $('.location').hide();
+                }
+            }
+        },
+
+        hideLocation: function(){
+            if(hide==false){
+                $('.location').hide();
+                $('#search').css('color', 'grey');
+                hide = true;
+            }else{
                 $('.location').show();
+                $('#search').css('color', blue);
+                hide=false;
             }
         },
 
@@ -404,74 +455,6 @@ $(document).ready(function() {
             var elements = document.getElementsByClassName(className);
             $(elements).css({'background-color': '#5bc0de', 'border-color': '#46b8da'});
             $(element).css({'background-color': '#f0ad4e', 'border-color': '#eea236'});
-        },
-
-        confirmChoice: function(){
-            $('#step1').css('color', '#616161');
-            $('#step2').css('color', '#616161');
-            $('#step3').css('color', '#E0E0E0');
-            $('#finalStepBtn').removeAttr('disabled');
-            aguFlag = true;
-
-            socket.emit('confirmlocation', { location: chosenNumber});
-            $('#school').prop('disabled', true);
-            $('#mountain').prop('disabled', true);
-            $('.mountainLocations').show();
-            $('.schoolLocations').show();
-            $('.location').hide();
-            $('#location'+chosenNumber).show();
-            $('.chooseLocation').hide();
-            $('.visualPlayers').show();
-//-----------------------to be improved
-            socket.emit('chooselocation', { location: chosenNumber, player: 1, group: groupNumber});
-            socket.emit('chooselocation', { location: chosenNumber, player: 2, group: groupNumber});
-            socket.emit('chooselocation', { location: chosenNumber, player: 3, group: groupNumber});
-
-//---------------------Final dialog
-            var locationName = $('#location'+chosenNumber+' button').attr('name');
-            $('#gameEnd h4').first().text("Vous avez choisi l'emplacement '"+locationName+"' .");
-            $('#gameEnd').dialog('open');
-
-//--------------------add "Argumentaire" part onto the card
-            var noteHeight = $('#location'+chosenNumber+' .note').height();
-
-            var txt = '<div class="arguments">';
-            txt += '<h4>Argumentaire :</h4>';
-            txt += '<span></span>';
-            txt += '</div>';
-            $('#location'+chosenNumber+' .note').after(txt);
-            var aguHeight = noteHeight + 180;
-            $('.arguments').css({'margin-top':aguHeight + 'px'});
-            $('#location'+chosenNumber).height(noteHeight + 300 +'px');
-
-
-            db.get('decision/'+groupNumber).then(function(doc) {
-                console.log("chosenNumber = "+chosenNumber);
-                return db.put({
-                    group: groupNumber,
-                    location: chosenNumber,
-                }, 'decision/'+groupNumber, doc._rev);
-            });
-        },
-
-        resetLocation: function(){
-            if($('.mountainLocations').css('display') !== "none"){
-                var $mountain = $('.mountainLocations .location');
-                $mountain.touch();
-                $mountain.css({'-webkit-transform' : 'rotate(0deg)',
-                    '-moz-transform' : 'rotate(0deg)',
-                    '-ms-transform' : 'rotate(0deg)',
-                    'transform' : 'rotate(0deg)'});
-            }
-
-            if($('.schoolLocations').css('display') !== "none"){
-                var $school = $('.schoolLocations .location');
-                $school.touch();
-                $school.css({'-webkit-transform' : 'rotate(0deg)',
-                    '-moz-transform' : 'rotate(0deg)',
-                    '-ms-transform' : 'rotate(0deg)',
-                    'transform' : 'rotate(0deg)'});
-            }
         }
     };
 
