@@ -15,8 +15,8 @@ var logger = new (winston.Logger)({
 });
 // Database
 var PouchDB = require('pouchdb');
-var db = new PouchDB('http://localhost:5984/trip');
-//var db = new PouchDB('http://134.214.198.102:5984/trip');
+//var db = new PouchDB('http://localhost:5984/trip');
+var db = new PouchDB('http://134.214.108.42:5984/trip');
 
 var app = express();
 var routes = require('./routes/index');
@@ -70,30 +70,19 @@ var io = require('socket.io')(httpserver);
 io.on('connection', function (socket) {
     socket.emit('news', {hello: 'world'});
 
-//    socket.on('choosegroup', function(data){
-//        logger.info('choose the group',data);
-//        // logger.log('info',data);
-//        io.emit('choosegroup', data);
-//    });
-    // Start listening for mouse events
+//        io.emit send message to all clients，socket.emit send message to particular client
+    socket.on('start',function(){
+        logger.info('Experiment Starts!!!!');
+    });
     socket.on('chooselocation', function (data) {
         logger.info('choose the location',data);
-//        io.emit send message to all clients，socket.emit send message to particular client
         var numLocation = data.location-1;
         io.emit('chooselocation', data);
     });
 
-    socket.on('confirmlocation', function(data){
-        logger.info('confirm the location',data);
-        io.emit('confirmlocation',data);
-    });
     socket.on('addnote', function(data){
         logger.info('add note',data);
         io.emit('addnote', data);
-    });
-    socket.on('addagu', function(data){
-        logger.info('add arguments',data);
-        io.emit('addagu', data);
     });
     socket.on('deletenote', function(data){
         logger.info('delete note',data);
@@ -107,5 +96,33 @@ io.on('connection', function (socket) {
     socket.on('vote', function(data){
         logger.info('vote for location',data);
         io.emit('vote', data);
+    });
+
+    socket.on('filtrateLocation', function(data){
+        logger.info('filtrate location', data);
+    });
+
+    socket.on('hideLocation', function(data){
+        logger.info('hide location', data);
+    });
+
+    socket.on('touchLocationCard', function(data){
+        logger.info('touch a location card', data);
+    });
+
+    socket.on('validation', function(data){
+        logger.info('validation', data);
+    });
+
+    socket.on('changeZoom', function(){
+        logger.info('change the zoom of the map');
+    });
+
+    socket.on('dragend', function(){
+        logger.info('drag the map');
+    });
+
+    socket.on('end', function(){
+        logger.info('Experiment Ends!!!!');
     });
 });

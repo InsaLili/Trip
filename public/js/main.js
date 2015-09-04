@@ -7,20 +7,20 @@ $(document).ready(function() {
         return false;
     });
 
-//    var db = new PouchDB('http://134.214.198.102:5984/trip');
-    var db = new PouchDB('http://localhost:5984/trip');
-//    var socket = io.connect('http://134.214.198.102:8000');
-    var socket = io.connect('http://localhost:8000');
+    var db = new PouchDB('http://134.214.108.42:5984/trip');
+//    var db = new PouchDB('http://localhost:5984/trip');
+    var socket = io.connect('http://134.214.108.42:8000');
+//    var socket = io.connect('http://localhost:8000');
 
     var map;
 
     var groupNumber = 1;
-    var chosenNumber = 0;
     var aguFlag = false;
     var locationAmount = 23;
     var attractionAmount = 15;
     var hide=false;
     var filter = false;
+    var stepNumber = 1;
     var markers = [];
     var locationNames = [
         'The Cloisters',
@@ -59,7 +59,7 @@ $(document).ready(function() {
         [40.758895,-73.985131],
         [40.7592487,-73.9793369],
         [40.7584653,-73.9759927],
-        [40.645244,-73.9449975],
+        [40.703750, -73.993853],
         [40.7114998,-74.0132725],
         [40.7813241,-73.9739882],
         [40.746761,-73.991731],//place16
@@ -72,7 +72,7 @@ $(document).ready(function() {
         [40.758521,-73.98601]
     ];
     var red = '#D00000';
-    var blue= '#1c94c4';
+    var white= '#eeeeee';
 
     var Server = {
         init: function () {
@@ -106,7 +106,7 @@ $(document).ready(function() {
                 var visual = '<div class="visualPlayers"  id="visualLocation'+num+'"><h4>Visualisation :</h4><div class="visualPlayer visualPlayer1"><img src="img/player1.png"></div><div class="visualPlayer visualPlayer2"><img src="img/player2.png"></div><div class="visualPlayer visualPlayer3"><img src="img/player3.png"></div></div>';
                 var choose = '<div class="chooseLocation"><h4>Choisir cet emplacement:</h4><button class="btn btn-default btn-md submitChoice" name='+name+' value='+num+'>Choisir</button></div>';
                 var vote = '<span class="vote" id="vote'+num+'"><h4>Évaluation :</h4><div class="voteId"><img src="img/player1.png"></div><div class="voteId"><img src="img/player2.png"></div><div class="voteId"><img src="img/player3.png"></div><span class="glyphicon glyphicon-heart grey"></span><span class="glyphicon glyphicon-heart grey"></span><span class="glyphicon glyphicon-heart grey"></span></span>';
-                var note = '<div class="note"><h4>Notes :</h4><span id="note1"></span></div>';
+                var note = '<div class="note"><h4>Notes :</h4><span id="note'+num+'"></span></div>';
                 var content = '<div class="locationContent">'+visual+choose+vote+note+'</div>';
 
                 $currentLocation.append(title);
@@ -126,9 +126,34 @@ $(document).ready(function() {
 
             $('#filter span').on('click', Server.filtrateLocation);
             $('#hidebutton span').on('click',Server.hideLocation);
-//            setTimeout(function(){
-//
-//            },)
+            $('#step1 .glyphicon').css('color', white);
+            $('#step1 p').css('color', white);
+            $('#validation').on('click', function(){
+                socket.emit('validation',{step: stepNumber});
+                if(stepNumber == 1){
+                    clearInterval(intervals.main);
+                    $('#step1 span').removeClass('glyphicon-unchecked');
+                    $('#step1 span').addClass('glyphicon-check');
+                    $('#step2 .glyphicon').css('color', white);
+                    $('#step2 p').css('color', white);
+                    $('#secondStepDialog').dialog('open');
+                    $('#validation').prop('disabled', true);
+                    stepNumber++;
+                }else if(stepNumber == 2){
+                    clearInterval(intervals.main);
+                    $('#step2 span').removeClass('glyphicon-unchecked');
+                    $('#step2 span').addClass('glyphicon-check');
+                    $('#step3 .glyphicon').css('color', white);
+                    $('#step3 p').css('color', white);
+                    stepNumber++;
+                }else {
+                    $('#step3 span').removeClass('glyphicon-unchecked');
+                    $('#step3 span').addClass('glyphicon-check');
+                    $('#gameEnd').dialog('open');
+                    $('#validation').prop('disabled', true);
+                }
+            });
+            $('#validation').prop('disabled', true);
         },
 
         //------------------Initialize each dialog
@@ -136,17 +161,21 @@ $(document).ready(function() {
             $("#start").dialog({
                 resizable: false,
                 width: 600,
-                height: 420,
+                height: 200,
                 modal: true,
                 buttons: {
                     "Commencer": function () {
+                        socket.emit('start');
                         $(this).dialog("close");
                         //-------------------set the counter
-                        $('#timer').countdown({
+                        $('#timer1').countdown({
                             image: "/img/digits.png",
                             format: "mm:ss",
-                            startTime: "20:00"
+                            startTime: "00:05"//change to 20:00
                         });
+                        setTimeout(function(){
+                            $('#validation').removeAttr('disabled');
+                        },5000);//change 5000 to 1000*60*20 before the experiment
                     }
                 }
             });
@@ -154,12 +183,21 @@ $(document).ready(function() {
                 autoOpen: false,
                 resizable: false,
                 width: 600,
-                height: 350,
+                height: 200,
                 modal: true,
                 buttons: {
                     "Commencer": function () {
                         $(this).dialog("close");
-                        secondStep();
+                        $('#timer1').remove();
+                        //-------------------set the counter
+                        $('#timer2').countdown({
+                            image: "/img/digits.png",
+                            format: "mm:ss",
+                            startTime: "00:05"//change to 20:00
+                        });
+                        setTimeout(function(){
+                            $('#validation').removeAttr('disabled');
+                        },5000);//change 5000 to 1000*60*20 before the experiment
                     }
                 }
             });
@@ -167,36 +205,15 @@ $(document).ready(function() {
             $("#gameEnd").dialog({
                 autoOpen: false,
                 width: 600,
-                height: 300,
+                height: 200,
                 modal: true,
                 buttons: {
-                    "Commencer": function () {
+                    "OK": function () {
+                        socket.emit('end');
                         $(this).dialog("close");
-                        $('#timer3').countdown({
-                            image: "/img/digits.png",
-                            format: "mm:ss",
-                            startTime: "07:00"
-                        });
                     }
                 }
             });
-
-            $( "#choiceConfirm" ).dialog({
-                autoOpen: false,
-                width:500,
-                height:200,
-                modal: true,
-                buttons: {
-                    "Oui": function() {
-                        $( this ).dialog( "close" );
-                        confirmChoice(map);
-                    },
-                    "Non": function() {
-                        $( this ).dialog( "close" );
-                    }
-                }
-            });
-
         },
 
         //------realize the communication between pages
@@ -210,10 +227,10 @@ $(document).ready(function() {
                 var notes = data.notes;
                 $('#note' + location).append('<p id=' + id + ' class="notePlayer' + player + '">' + content + '</p>');
                 var noteHeight = $('#location' + location + ' .note').height();
-                if (noteHeight + 200 > 350) {
+                if (noteHeight + 200 > 300) {
                     $('#location' + location).height(noteHeight + 200 + 'px');
                 } else {
-                    $('#location' + location).height(350 + 'px');
+                    $('#location' + location).height(300 + 'px');
                 }
 
             });
@@ -239,10 +256,10 @@ $(document).ready(function() {
                 var player = data.player;
                 var notes = data.notes;
                 var noteHeight = $('#location' + location + ' .note').height();
-                if (noteHeight + 200 > 350) {
+                if (noteHeight + 200 > 300) {
                     $('#location' + location).height(noteHeight + 200 + 'px');
                 } else {
-                    $('#location' + location).height(350 + 'px');
+                    $('#location' + location).height(300 + 'px');
                 }
             });
 
@@ -278,7 +295,7 @@ $(document).ready(function() {
         },
 
         mapInit: function () {
-
+            Server.fixInfoWindow();
             var message = [];
 
             //        info in the pop-up window
@@ -292,7 +309,8 @@ $(document).ready(function() {
             var mapProp = {
                 center: new google.maps.LatLng(40.7504877,-73.9839238),
                 zoom: 12,
-                mapTypeId: google.maps.MapTypeId.ROADMAP
+                mapTypeId: google.maps.MapTypeId.ROADMAP,
+                disableDefaultUI: true
             };
 
             //    draw the map on DOM, which id is "googleMap"
@@ -320,11 +338,19 @@ $(document).ready(function() {
                 markers.push(marker);
                 Server.attachMessage(marker, i, message);
             }
+
+//            map.addListener('zoom_changed', function(){
+//               socket.emit('changeZoom');
+//            });
+//            map.addListener('dragend', function(){
+//               socket.emit('dragend');
+//            });
         },
 
         attachMessage: function(marker, num, message) {
             var infowindow = new google.maps.InfoWindow({
                 content: message[num],
+                noSupress: true,
                 maxWidth: 320
             });
 
@@ -339,6 +365,21 @@ $(document).ready(function() {
             }
         },
 
+        fixInfoWindow: function(){
+            //Here we redefine set() method.
+            //If it is called for map option, we hide InfoWindow, if "noSupress" option isnt true.
+            //As Google doesn't know about this option, its InfoWindows will not be opened.
+            var set = google.maps.InfoWindow.prototype.set;
+            google.maps.InfoWindow.prototype.set = function (key, val) {
+                if (key === 'map') {
+                    if (!this.get('noSupress')) {
+                        console.log('This InfoWindow is supressed. To enable it, set "noSupress" option to true');
+                        return;
+                    }
+                }
+                set.apply(this, arguments);
+            }
+        },
         //-----------------Add users' notes to the location cards
         attachNotes: function(){
             $('.location p').remove();
@@ -396,6 +437,7 @@ $(document).ready(function() {
 
         //-----------------Add rating results to location card
         filtrateLocation: function(){
+            socket.emit('filtrateLocation',{filter: filter});
             if(filter == false){
                 Server.setMapOnAll(null);
                 $( '#heart' ).css('color', red);
@@ -430,13 +472,14 @@ $(document).ready(function() {
         },
 
         hideLocation: function(){
+            socket.emit('hideLocation',{hide: hide});
             if(hide==false){
                 $('.location').hide();
                 $('#search').css('color', 'grey');
                 hide = true;
             }else{
                 $('.location').show();
-                $('#search').css('color', blue);
+                $('#search').css('color', white);
                 hide=false;
             }
         },

@@ -3,6 +3,8 @@
  */
 
 (function($, TweenLite) {
+    var socket = io.connect('http://134.214.108.42:8000');
+
     "use strict";
 
     var defaults = {
@@ -189,6 +191,8 @@
         if(this.options.touchClass) {
             this.$elem.removeClass(this.options.touchClass);
         }
+
+        socket.emit('touchLocationCard', {location: this.$elem.attr('id')});
     };
 
     // plugin wrapper

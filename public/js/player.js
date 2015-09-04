@@ -4,7 +4,7 @@ $(document).ready(function($){
     // Variables =============================================================
     var locationNumber;
     var groupNumber = 1;
-    var playerNumber = 1;
+    var playerNumber = 0;
     var allNotes = 0;
     var like = false;
     var red = '#D00000';
@@ -16,9 +16,9 @@ $(document).ready(function($){
     // Functions =============================================================
     var Client = {
         init: function(){
+            $('#appLayer').hide();
             //set avatar src based on user's choice
             var imgSrc = ['img/player1.png','img/player2.png','img/player3.png'];
-            $('#avatar img').attr('src',imgSrc[playerNumber-1]);
 
             //------------------hide arguments part
             $('#showAgu').hide();
@@ -39,8 +39,16 @@ $(document).ready(function($){
             $("#showNotes").on('click', '.deletenote', function(){
                 Client.deleteNote(this.id);
             });
-            Client.dialogInit();
-            Client.serviceInit();
+
+            $('.choosePlayerBtn').on('click', function(){
+                $('#maskLayer').hide();
+                $('#appLayer').show();
+
+                playerNumber = parseInt($(this).val());
+                $('#avatar img').attr('src',imgSrc[playerNumber-1]);
+                Client.dialogInit();
+                Client.serviceInit();
+            });
         },
 
         //------------------dialog initiation
@@ -139,6 +147,23 @@ $(document).ready(function($){
                 $('#showNotes span').html(noteContent);
                 Client.changeColor();
             });
+            Client.getNoteNumber();
+        },
+
+        getNoteNumber: function(){
+            var startKey = 'note_'+groupNumber;
+            db.allDocs({
+                include_docs: true,
+                attachements: true,
+                startkey: startKey,
+                endkey: startKey+'\uffff'
+            }).then(function(notes){
+                for(var i=0; i < notes.rows.length; i++){
+                    if(notes.rows[i].doc.author == playerNumber){
+                        allNotes++;
+                    }
+                }
+            });
         },
 
         attachVote: function(){
@@ -207,6 +232,7 @@ $(document).ready(function($){
                 }).then(function(){
                     $('#showNotes span').append('<div class="noteOfPlayer">'+'<p>'+text+'</p>'+'<button id='+id+'  class="btn btn-default btn-xs deletenote">Effacer</button>'+'</div>');
                     Client.changeColor();
+                    allNotes++;
                     socket.emit('addnote', {id: id, content: text, location: locationNumber, player: playerNumber, notes: allNotes});
                 });
             }).catch(function(err){
@@ -217,55 +243,6 @@ $(document).ready(function($){
             textarea.val('');
         },
 
-        addAgu: function(){
-            event.preventDefault();
-
-            if(!locationNumber){
-                $('#chooseLocationDlg').dialog('open');
-                return;
-            }
-            //if textarea is empty, return false
-            var textarea = $('#myAgu textarea');
-            var text = textarea.val();
-            if(!text){
-                $('#writeNoteDlg').dialog('open');
-                return;
-            }
-
-            var startKey = 'agu_'+groupNumber+'_'+locationNumber+'_'+playerNumber;
-            var aguNumber;
-            db.allDocs({
-                include_docs: true,
-                attachements: true,
-                startkey: startKey,
-                endkey: startKey+'\uffff'
-            }).then(function(agus){
-            //如果之前已经有note，则noteNumber为之前最后一条note的number加1
-            //如果没有，则noteNumber为1
-                if(agus.rows.length !== 0){
-                    aguNumber = agus.rows[agus.rows.length-1].doc.number+1;
-                }else{
-                    aguNumber = 1;
-                }
-                //the new id for new note
-                var id = 'agu_'+groupNumber+'_'+locationNumber+'_'+playerNumber+'_'+aguNumber;
-                db.put({
-                    _id: id,
-                    "type": "agu",
-                    "group": groupNumber,
-                    "location": locationNumber,
-                    "author": playerNumber,
-                    "number": aguNumber,
-                    'content':text
-                }).then(function(){
-                    $('#showAgu span').append('<div class="aguOfPlayer">'+'<p>'+text+'</p>'+'<button id='+id+'  class="btn btn-default btn-xs" onclick="Client.deleteAgu(this.id)">Effacer</button>'+'</div>');
-                    socket.emit('addagu', {id: id, content: text, location: locationNumber, player: playerNumber});
-                });
-            });
-            //    clear textarea
-            textarea.val('');
-        },
-
         deleteNote: function(id){
             db.get(id).then(function(doc){
                 return db.remove(doc);
@@ -273,15 +250,6 @@ $(document).ready(function($){
                 $('#'+id).parent().remove();
                 allNotes--;
                 socket.emit('deletenote', {id: id, location: locationNumber, player: playerNumber, notes: allNotes});
-            });
-        },
-
-        deleteAgu: function(id){
-            db.get(id).then(function(doc){
-                return db.remove(doc);
-            }).then(function(){
-                $('#'+id).parent().remove();
-                socket.emit('deleteagu', {id: id, location: locationNumber, player: playerNumber});
             });
         },
 
