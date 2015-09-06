@@ -7,21 +7,18 @@ $(document).ready(function() {
         return false;
     });
 
-    var db = new PouchDB('http://134.214.108.42:5984/trip');
-//    var db = new PouchDB('http://localhost:5984/trip');
-    var socket = io.connect('http://134.214.108.42:8000');
-//    var socket = io.connect('http://localhost:8000');
-
-    var map;
-
+//    var db = new PouchDB('http://134.214.108.42:5984/trip');
+    var db = new PouchDB('http://localhost:5984/trip');
+//    var socket = io.connect('http://134.214.108.42:8000');
+    var socket = io.connect('http://localhost:8000');
     var groupNumber = 1;
-    var aguFlag = false;
     var locationAmount = 23;
     var attractionAmount = 15;
-    var hide=false;
-    var filter = false;
+    var cardBtn = false;
+    var heartBtn = false;
+    var attractionBtn = false;
+    var hotelBtn = false;
     var stepNumber = 1;
-    var markers = [];
     var locationNames = [
         'The Cloisters',
         'Central Park',
@@ -47,32 +44,33 @@ $(document).ready(function() {
         'DoubleTree',
         'New York Marriott Marquis'];
     var locationCoordinates = [
-        [40.8648628,-73.9317274],
-        [40.7828647,-73.9653551],
-        [40.7818015,-73.9811689],
-        [40.7484404,-73.9856554],
-        [40.7614327,-73.9776216],
-        [40.7015699,-74.0091314],
-        [40.6892494,-74.0445004],
-        [40.7318461,-73.9966758],
-        [40.7531823,-73.9822534],
-        [40.758895,-73.985131],
-        [40.7592487,-73.9793369],
-        [40.7584653,-73.9759927],
-        [40.703750, -73.993853],
-        [40.7114998,-74.0132725],
-        [40.7813241,-73.9739882],
-        [40.746761,-73.991731],//place16
-        [40.8147773,-73.9429932],
-        [40.7889031,-73.9751046],
-        [40.7979427,-73.9699991],
-        [40.746876,-73.9823115],
-        [40.7574278,-73.9838552],
-        [40.756633,-73.971413],
-        [40.758521,-73.98601]
+        [-73.9317274,40.8648628],
+        [-73.9653551,40.7828647],
+        [-73.9811689,40.7818015],
+        [-73.9856554,40.7484404],
+        [-73.9776216,40.7614327],
+        [-74.0091314,40.7015699],
+        [-74.0445004,40.6892494],
+        [-73.9966758,40.7318461],
+        [-73.9822534,40.7531823],
+        [-73.985131,40.758895],
+        [-73.9793369,40.7592487],
+        [-73.9759927,40.7584653],
+        [-73.993853,40.703750],
+        [-74.0132725,40.7114998],
+        [-73.9739882,40.7813241],
+        [-73.991731,40.746761],//place16
+        [-73.9429932,40.8147773],
+        [-73.9751046,40.7889031],
+        [-73.9699991,40.7979427],
+        [-73.9823115,40.746876],
+        [-73.9838552,40.7574278],
+        [-73.971413,40.756633],
+        [-73.98601,40.758521]
     ];
     var red = '#D00000';
     var white= '#eeeeee';
+    var blue= '#63b6e5';
 
     var Server = {
         init: function () {
@@ -124,10 +122,11 @@ $(document).ready(function() {
                 Server.chooseLocation(this);
             });
 
-            $('#filter span').on('click', Server.filtrateLocation);
-            $('#hidebutton span').on('click',Server.hideLocation);
+            $('#heart').on('click', Server.filtrateLocation);
+            $('#all').on('click',Server.hideLocation);
             $('#step1 .glyphicon').css('color', white);
             $('#step1 p').css('color', white);
+
             $('#validation').on('click', function(){
                 socket.emit('validation',{step: stepNumber});
                 if(stepNumber == 1){
@@ -153,6 +152,9 @@ $(document).ready(function() {
                     $('#validation').prop('disabled', true);
                 }
             });
+
+
+
             $('#validation').prop('disabled', true);
         },
 
@@ -295,7 +297,12 @@ $(document).ready(function() {
         },
 
         mapInit: function () {
-            Server.fixInfoWindow();
+
+            L.mapbox.accessToken = 'pk.eyJ1IjoiaW5zYWxpbGkiLCJhIjoickF1VzlYVSJ9.JH9ZrV76fbU5Ub9ZgBhNCw';
+            var map = L.mapbox.map('map', 'insalili.nc53883g', {
+                zoomControl: false
+            }).setView([40.7504877,-73.9839238], 12);
+
             var message = [];
 
             //        info in the pop-up window
@@ -305,81 +312,81 @@ $(document).ready(function() {
                 message[i]= '<div id="marker'+num+'"><h3>'+name+'</h3><img class= "markerImg" src="/img/place'+num+'.jpg"><button type="button" class="btn player1 markerBtn" value="'+num+',1"><img src="/img/player1.png"></button><button type="button" class="btn player2 markerBtn" value="'+num+',2"><img src="/img/player2.png"></button><button type="button" class="btn player3 markerBtn" value="'+num+',3"><img src="/img/player3.png"></button></div>';
             }
 
-            //    propoties of the map
-            var mapProp = {
-                center: new google.maps.LatLng(40.7504877,-73.9839238),
-                zoom: 12,
-                mapTypeId: google.maps.MapTypeId.ROADMAP,
-                disableDefaultUI: true
-            };
+            var myLayer = L.mapbox.featureLayer().addTo(map);
 
-            //    draw the map on DOM, which id is "googleMap"
-            map = new google.maps.Map(document.getElementById("map"), mapProp);
+            var geojson = {};
+            geojson['type'] = 'FeatureCollection';
+            geojson['features'] = [];
 
-            //      draw markers
-            for (i = 0; i < locationAmount; i++) {
-                var latitude = parseFloat(locationCoordinates[i][0]);
-                var longitude = parseFloat(locationCoordinates[i][1]);
-                var location = new google.maps.LatLng(latitude, longitude);
-                var image;
-                if(i<attractionAmount){
-                    image = 'img/attraction.png'
+            for (var k =0; k<locationAmount; k++) {
+                var symbol,color,hotels,attractions;
+                if(k<attractionAmount){
+                    symbol = "pitch";
+                    color = "#E91E63";
+                    hotels = false;
+                    attractions = true;
                 }else{
-                    image = 'img/hotel.png'
+                    symbol = "lodging";
+                    color = "#FF9800";
+                    hotels = true;
+                    attractions = false;
                 }
-                var marker = new google.maps.Marker({
-                    position: location,
-                    icon: image
-                });
-                marker.setMap(map);
-                var locationNum = i + 1;
-                marker.metadata = {id: "location" + locationNum};
-                marker.setTitle((i + 1).toString());
-                markers.push(marker);
-                Server.attachMessage(marker, i, message);
-            }
-
-//            map.addListener('zoom_changed', function(){
-//               socket.emit('changeZoom');
-//            });
-//            map.addListener('dragend', function(){
-//               socket.emit('dragend');
-//            });
-        },
-
-        attachMessage: function(marker, num, message) {
-            var infowindow = new google.maps.InfoWindow({
-                content: message[num],
-                noSupress: true,
-                maxWidth: 320
-            });
-
-            google.maps.event.addListener(marker, 'click', function() {
-                infowindow.open(marker.get('map'), marker);
-            });
-        },
-
-        setMapOnAll: function(map){
-            for(var i=0;i<locationAmount;i++){
-                markers[i].setMap(map);
-            }
-        },
-
-        fixInfoWindow: function(){
-            //Here we redefine set() method.
-            //If it is called for map option, we hide InfoWindow, if "noSupress" option isnt true.
-            //As Google doesn't know about this option, its InfoWindows will not be opened.
-            var set = google.maps.InfoWindow.prototype.set;
-            google.maps.InfoWindow.prototype.set = function (key, val) {
-                if (key === 'map') {
-                    if (!this.get('noSupress')) {
-                        console.log('This InfoWindow is supressed. To enable it, set "noSupress" option to true');
-                        return;
+                var newFeature = {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": locationCoordinates[k]
+                    },
+                    "properties": {
+                        "title": locationNames[k],
+                        "metadata":k,
+                        "content": message[k],
+                        "hotels": hotels,
+                        "attractions": attractions,
+                        "marker-symbol": symbol,
+                        "marker-color": color,
+                        "marker-size": "large"
                     }
-                }
-                set.apply(this, arguments);
+                };
+                geojson['features'].push(newFeature);
             }
+
+            myLayer.on('layeradd', function(e) {
+                var marker = e.layer;
+                var feature = marker.feature;
+
+                var popupContent = feature.properties.content;
+
+                marker.bindPopup(popupContent,{
+                    closeButton: false,
+                    minWidth:400,
+                    maxWidth: 400
+                });
+            });
+
+            //----------------Add features to the map.
+            myLayer.setGeoJSON(geojson);
+
+            $('.filter button').on('click', function() {
+                var button = $(this).data('filter');
+                switch (button){
+                    case 'card':
+                        (cardBtn==true)?cardBtn=false:cardBtn=true;
+                        break;
+                    case 'heart':
+                        (heartBtn==true)?heartBtn=false:heartBtn=true;
+                        break;
+                    case 'hotels':
+                        (hotelBtn==true)?hotelBtn=false:hotelBtn=true;
+                        break;
+                    case 'attractions':
+                        (attractionBtn==true)?attractionBtn=false:attractionBtn=true;
+                }
+                ($(this).hasClass('active') == true)? $(this).removeClass('active'):$(this).addClass('active');
+                Server.filtrateLocation(myLayer);
+            });
         },
+
         //-----------------Add users' notes to the location cards
         attachNotes: function(){
             $('.location p').remove();
@@ -435,54 +442,118 @@ $(document).ready(function() {
             });
         },
 
-        //-----------------Add rating results to location card
-        filtrateLocation: function(){
-            socket.emit('filtrateLocation',{filter: filter});
-            if(filter == false){
-                Server.setMapOnAll(null);
-                $( '#heart' ).css('color', red);
-                filter = true;
-                $('.location').hide();
-                var startKey = 'vote_'+groupNumber;
-                db.allDocs({
-                    include_docs: true,
-                    attachements: true,
-                    startkey: startKey,
-                    endkey: startKey+'\uffff'
-                }).then(function(votes){
-                    for(var i = 0; i < votes.rows.length; i++) {
-                        var doc = votes.rows[i].doc;
-                        if(doc.vote == true){
-                            var location = doc.location;
-                            $('#location'+location).show();
-                            markers[location-1].setMap(map);
+        filtrateLocation: function(layer){
+            $('.location').hide();
+            if(attractionBtn==true && hotelBtn==true){
+                if(heartBtn==true){
+                    var startKey = 'vote_'+groupNumber;
+                    db.allDocs({
+                        include_docs: true,
+                        attachements: true,
+                        startkey: startKey,
+                        endkey: startKey+'\uffff'
+                    }).then(function(votes){
+                        var list=[];
+                        for(var i = 0; i < votes.rows.length; i++) {
+                            var doc = votes.rows[i].doc;
+                            if(doc.vote == true){
+                                var location = doc.location;
+                                if(cardBtn==true) $('#location'+location).show();
+                                list.push(location);
+                            }
                         }
-                    }
-                });
-            }else{
-                Server.setMapOnAll(map);
-                $( '#heart' ).css('color', 'grey');
-                filter = false;
-                if(hide==false){
-                    $('.location').show();
+                        layer.setFilter(function(f) {
+                            var number = f.properties.metadata;
+                            return (jQuery.inArray(number, list)!==-1);
+                        });
+                    });
                 }else{
-                    $('.location').hide();
+                    if(cardBtn==true) $('.location').show();
+                    layer.setFilter(function(f) {
+                        return true;
+                    });
                 }
+            }else if(attractionBtn==true && hotelBtn==false){
+                if(heartBtn==true){
+                    var startKey = 'vote_'+groupNumber;
+                    db.allDocs({
+                        include_docs: true,
+                        attachements: true,
+                        startkey: startKey,
+                        endkey: startKey+'\uffff'
+                    }).then(function(votes){
+                        var list=[];
+                        for(var i = 0; i < votes.rows.length; i++) {
+                            var doc = votes.rows[i].doc;
+                            if(doc.vote == true){
+                                var location = doc.location;
+                                if(location<=attractionAmount){
+                                    list.push(location);
+                                    if(cardBtn==true) $('#location'+location).show();
+                                }
+                            }
+                        }
+                        layer.setFilter(function(f) {
+                            var number = f.properties.metadata;
+                            return (jQuery.inArray(number, list)!==-1);
+                        });
+                    });
+                }else{
+                    if(cardBtn==true) $('.attractions').show();
+                    layer.setFilter(function(f) {
+                        return f.properties.attractions === true;
+                    });
+                }
+            }else if(attractionBtn==false && hotelBtn==true){
+                if(heartBtn==true){
+                    var startKey = 'vote_'+groupNumber;
+                    db.allDocs({
+                        include_docs: true,
+                        attachements: true,
+                        startkey: startKey,
+                        endkey: startKey+'\uffff'
+                    }).then(function(votes){
+                        var list=[];
+                        for(var i = 0; i < votes.rows.length; i++) {
+                            var doc = votes.rows[i].doc;
+                            if(doc.vote == true){
+                                var location = doc.location;
+                                if(location>attractionAmount){
+                                    list.push(location);
+                                    if(cardBtn==true) $('#location'+location).show();
+                                }
+                            }
+                        }
+                        layer.setFilter(function(f) {
+                            var number = f.properties.metadata;
+                            return (jQuery.inArray(number, list)!==-1);
+                        });
+                    });
+                }else{
+                    if(cardBtn==true) $('.hotels').show();
+                    layer.setFilter(function(f) {
+                        return f.properties.hotels === true;
+                    });
+                }
+            }else{
+                layer.setFilter(function(f) {
+                    return false;
+                });
             }
         },
 
-        hideLocation: function(){
-            socket.emit('hideLocation',{hide: hide});
-            if(hide==false){
-                $('.location').hide();
-                $('#search').css('color', 'grey');
-                hide = true;
-            }else{
-                $('.location').show();
-                $('#search').css('color', white);
-                hide=false;
-            }
-        },
+//        hideLocation: function(){
+//            socket.emit('hideLocation',{hide: hide});
+//            if(hide==false){
+//                $('.location').hide();
+//                $('#all').css('color', 'grey');
+//                hide = true;
+//            }else{
+//                $('.location').show();
+//                $('#all').css('color', blue);
+//                hide=false;
+//            }
+//        },
 
         chooseLocation: function(element){
             var buttonValue = element.value.split(',');

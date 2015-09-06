@@ -33,24 +33,21 @@ p{
     box-shadow: 0 13px 25px 0 rgba(0, 0, 0, 0.3);
 }
 #tasks{
-    width: 75%;
+    width: 65%;
     float: left;
     margin-left: 1%;
 }
 #tasks h1{
-    margin-left: 40px;
+    margin-left: 20px;
     color: #eeeeee;
     float: left;
 }
 #steps{
-    width: 55%;
+    width: 620px;
     margin-left: 20px;
     float: left;
 }
-#steps button{
-    margin-left: 40px;
-    margin-top: 20px;
-}
+
 #steps p{
     color: #9E9E9E;
     font: italic bold 25px Georgia, serif;
@@ -62,33 +59,39 @@ p{
 #steps span.glyphicon{
     color: #9E9E9E;
     margin-top: 27px;
-    margin-left: 40px;
+    margin-left: 30px;
     float: left;
     font-size: 2em;
 }
 
-#hidebutton{
-    width: 5%;
-    float: left;
+.filter{
+    width: 10%;
     margin-left: 1%;
-}
-#filter{
-    width: 5%;
     float: left;
-    margin-left: 1%;
 }
-#filter .glyphicon-heart{
+
+.filter button{
+    width: 70px;
+    height: 60px;
+    float: left;
+    margin-top: 10px;
     margin-left: 20px;
-    margin-top: 15px;
-    font-size: 3.5em;
+    background-color: #9E9E9E;
+}
+.filter button.actived{
+    background-color: #eeeeee;
+}
+.filter .glyphicon-th-large, .kit .glyphicon-heart, #filter .glyphicon-header{
+    font-size: 2.5em;
 }
 
-#hidebutton .glyphicon-th{
-    margin-left: 26px;
-    margin-top: 15px;
-    font-size: 3.5em;
+#hotel img{
+    width: 3em;
 }
-
+#attraction img{
+    /*width: 100%;*/
+    height: 3em;
+}
 #counter{
     float: right;
     margin-right: 1%;
@@ -304,7 +307,9 @@ p{
 .white{
     color: #eeeeee;
 }
-
+.blue{
+    color: #3F51B5;
+}
 a[href^="http://maps.google.com/maps"]{display:none !important}
 a[href^="https://maps.google.com/maps"]{display:none !important}
 

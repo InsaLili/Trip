@@ -6,6 +6,7 @@
     <link rel="stylesheet" media="screen" href="css/bootstrap.min.css">
     <link rel="stylesheet" media="screen" href="css/media.css">
     <link rel="stylesheet" media="screen" href="jquery-ui-1.11.4/jquery-ui.css">
+    <link rel="stylesheet" media="screen" href="css/mapbox.css">
     <link rel="stylesheet" media="screen" href="css/main.css">
     <title>Map</title>
 </head>
@@ -29,15 +30,16 @@
                     <span class="glyphicon glyphicon-unchecked"></span>
                     <p>Présentation</p>
                 </div>
-                <button class="btn btn-default btn-lg" id="validation">Validation</button>
             </div>
         </div>
+        <div class="kit filter">
+            <button id="attraction" class="btn btn-default btn-md" data-filter='attractions'><img src="img/icon-pitch-1.png"></button>
+            <button id="hotel" class="btn btn-default btn-md" data-filter='hotels'><img src="img/icon-hotel-1.png"></button>
+         </div>
 
-        <div id="hidebutton" class="kit">
-            <span class="glyphicon glyphicon-th white" id="search"></span>
-        </div>
-        <div id="filter" class="kit">
-            <span class="glyphicon glyphicon-heart grey" id="heart"></span>
+        <div class="kit filter">
+            <button id="like" class="btn btn-default btn-md" data-filter='heart'><span class="glyphicon glyphicon-heart red"></span></button>
+            <button id="all" class="btn btn-default btn-md" data-filter='card'><span class="glyphicon glyphicon-th-large blue"></span></button>
         </div>
         <!--timer-->
         <div id="counter" class="kit">
@@ -69,6 +71,8 @@
 
 <script src="js/jquery-2.1.3.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<!--<script src="js/mapbox.js"></script>-->
+<script src='https://api.mapbox.com/mapbox.js/v2.2.2/mapbox.js'></script>
 <script src="jquery-ui-1.11.4/jquery-ui.js"></script>
 <script src="js/jquery.ui.touch-punch.min.js"></script>
 <script src="js/hammer.min.js"></script>
@@ -78,8 +82,7 @@
 <script src="js/jquery.countdown.js"></script>
 <script src="js/jquery.touch.js"></script>
 <script src="js/main.js"></script>
-<script src="http://maps.googleapis.com/maps/api/js"></script>
-
+<!--<script src="http://maps.googleapis.com/maps/api/js"></script>-->
 <!-- <script src="js/database.js"></script> -->
 <!--<script src="js/main_2.js"></script>-->
 </body>
