@@ -41,7 +41,7 @@
         <div id="avatar"><img src=""></div>
         <div id="vote">
             <span class="glyphicon glyphicon-heart grey" id="heart"></span>
-            <p>I like</p>
+            <p>J'aime</p>
         </div>
         <div id="addNotes" >
             <h5>Ajouter mes notes</h5>
@@ -50,21 +50,10 @@
                 <button class="btn btn-default pull-right btn-sm" id="submitNote">Validation</button>
             </div>
         </div>
-        <div id="addAgu">
-            <h5>Ajouter mes argumentaires</h5>
-            <div id="myAgu">
-                <textarea class="form-control" rows="5" cols="1"></textarea>
-                <button class="btn btn-default pull-right btn-sm" id="submitAgu">Validation</button>
-            </div>
-        </div>
 
+        <h5 id="noteTitle">Mes notes</h5>
         <div id="showNotes">
-            <h5>Mes notes</h5>
             <span id="note"></span>
-        </div>
-        <div id="showAgu">
-            <h5>Mes argumentaires</h5>
-            <span id="arguments"></span>
         </div>
     </div>
     <div id="dialogSpace">
@@ -80,10 +69,12 @@
 <script src="jquery-ui-1.11.4/jquery-ui.js"></script>
 <script src="js/hammer.min.js"></script>
 <script src="js/pouchdb-3.4.0.min.js"></script>
+<script src="js/pouchdb-upsert.js"></script>
 <script src="js/socket.io.js"></script>
 <script src="js/player.js"></script>
 <script src="js/star-rating.min.js"></script>
 <script src="js/screenfull.js"></script>
 <script src="jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<!--<script src="js/database.js"></script>-->
 </body>
 </html>

@@ -11,6 +11,7 @@ $(document).ready(function() {
     var db = new PouchDB('http://localhost:5984/trip');
 //    var socket = io.connect('http://134.214.108.42:8000');
     var socket = io.connect('http://localhost:8000');
+    var myLayer;
     var groupNumber = 1;
     var locationAmount = 23;
     var attractionAmount = 15;
@@ -126,36 +127,39 @@ $(document).ready(function() {
             $('#all').on('click',Server.hideLocation);
             $('#step1 .glyphicon').css('color', white);
             $('#step1 p').css('color', white);
-
-            $('#validation').on('click', function(){
-                socket.emit('validation',{step: stepNumber});
-                if(stepNumber == 1){
+            $('#step1 span').on('click', function(){
+                if(stepNumber==1){
+                    socket.emit('validation',{step: stepNumber});
                     clearInterval(intervals.main);
-                    $('#step1 span').removeClass('glyphicon-unchecked');
-                    $('#step1 span').addClass('glyphicon-check');
+                    $(this).removeClass('glyphicon-unchecked');
+                    $(this).addClass('glyphicon-check');
                     $('#step2 .glyphicon').css('color', white);
                     $('#step2 p').css('color', white);
                     $('#secondStepDialog').dialog('open');
-                    $('#validation').prop('disabled', true);
                     stepNumber++;
-                }else if(stepNumber == 2){
+                }
+
+            });
+            $('#step2 span').on('click', function() {
+                if(stepNumber==2){
+                    socket.emit('validation', {step: stepNumber});
                     clearInterval(intervals.main);
-                    $('#step2 span').removeClass('glyphicon-unchecked');
-                    $('#step2 span').addClass('glyphicon-check');
+                    $(this).removeClass('glyphicon-unchecked');
+                    $(this).addClass('glyphicon-check');
                     $('#step3 .glyphicon').css('color', white);
                     $('#step3 p').css('color', white);
+                    $('#thirdStepDialog').dialog('open');
                     stepNumber++;
-                }else {
-                    $('#step3 span').removeClass('glyphicon-unchecked');
-                    $('#step3 span').addClass('glyphicon-check');
+                }
+            });
+            $('#step3 span').on('click', function() {
+                if(stepNumber==3){
+                    $(this).removeClass('glyphicon-unchecked');
+                    $(this).addClass('glyphicon-check');
                     $('#gameEnd').dialog('open');
                     $('#validation').prop('disabled', true);
                 }
             });
-
-
-
-            $('#validation').prop('disabled', true);
         },
 
         //------------------Initialize each dialog
@@ -173,7 +177,7 @@ $(document).ready(function() {
                         $('#timer1').countdown({
                             image: "/img/digits.png",
                             format: "mm:ss",
-                            startTime: "00:05"//change to 20:00
+                            startTime: "15:00"//change to 15:00
                         });
                         setTimeout(function(){
                             $('#validation').removeAttr('disabled');
@@ -195,7 +199,7 @@ $(document).ready(function() {
                         $('#timer2').countdown({
                             image: "/img/digits.png",
                             format: "mm:ss",
-                            startTime: "00:05"//change to 20:00
+                            startTime: "10:00"//change to 10:00
                         });
                         setTimeout(function(){
                             $('#validation').removeAttr('disabled');
@@ -204,6 +208,17 @@ $(document).ready(function() {
                 }
             });
 
+            $("#thirdStepDialog").dialog({
+                autoOpen: false,
+                width: 600,
+                height: 200,
+                modal: true,
+                buttons: {
+                    "OK": function () {
+                        $(this).dialog("close");
+                    }
+                }
+            });
             $("#gameEnd").dialog({
                 autoOpen: false,
                 width: 600,
@@ -292,6 +307,7 @@ $(document).ready(function() {
                 } else {
                     $(hearts[player - 1]).css('color', 'grey');
                 }
+                if(heartBtn==true) Server.filtrateLocation();
             });
 
         },
@@ -312,7 +328,7 @@ $(document).ready(function() {
                 message[i]= '<div id="marker'+num+'"><h3>'+name+'</h3><img class= "markerImg" src="/img/place'+num+'.jpg"><button type="button" class="btn player1 markerBtn" value="'+num+',1"><img src="/img/player1.png"></button><button type="button" class="btn player2 markerBtn" value="'+num+',2"><img src="/img/player2.png"></button><button type="button" class="btn player3 markerBtn" value="'+num+',3"><img src="/img/player3.png"></button></div>';
             }
 
-            var myLayer = L.mapbox.featureLayer().addTo(map);
+            myLayer = L.mapbox.featureLayer().addTo(map);
 
             var geojson = {};
             geojson['type'] = 'FeatureCollection';
@@ -339,7 +355,7 @@ $(document).ready(function() {
                     },
                     "properties": {
                         "title": locationNames[k],
-                        "metadata":k,
+                        "metadata":k+1,
                         "content": message[k],
                         "hotels": hotels,
                         "attractions": attractions,
@@ -381,9 +397,11 @@ $(document).ready(function() {
                         break;
                     case 'attractions':
                         (attractionBtn==true)?attractionBtn=false:attractionBtn=true;
+                        break;
                 }
+                socket.emit('filtrateLocation',{button:button, cardBtn:cardBtn, heartBtn:heartBtn, hotelsBtn: hotelBtn, attractionBtn:attractionBtn});
                 ($(this).hasClass('active') == true)? $(this).removeClass('active'):$(this).addClass('active');
-                Server.filtrateLocation(myLayer);
+                Server.filtrateLocation();
             });
         },
 
@@ -442,7 +460,7 @@ $(document).ready(function() {
             });
         },
 
-        filtrateLocation: function(layer){
+        filtrateLocation: function(){
             $('.location').hide();
             if(attractionBtn==true && hotelBtn==true){
                 if(heartBtn==true){
@@ -462,14 +480,14 @@ $(document).ready(function() {
                                 list.push(location);
                             }
                         }
-                        layer.setFilter(function(f) {
+                        myLayer.setFilter(function(f) {
                             var number = f.properties.metadata;
                             return (jQuery.inArray(number, list)!==-1);
                         });
                     });
                 }else{
                     if(cardBtn==true) $('.location').show();
-                    layer.setFilter(function(f) {
+                    myLayer.setFilter(function(f) {
                         return true;
                     });
                 }
@@ -493,14 +511,14 @@ $(document).ready(function() {
                                 }
                             }
                         }
-                        layer.setFilter(function(f) {
+                        myLayer.setFilter(function(f) {
                             var number = f.properties.metadata;
                             return (jQuery.inArray(number, list)!==-1);
                         });
                     });
                 }else{
                     if(cardBtn==true) $('.attractions').show();
-                    layer.setFilter(function(f) {
+                    myLayer.setFilter(function(f) {
                         return f.properties.attractions === true;
                     });
                 }
@@ -524,19 +542,19 @@ $(document).ready(function() {
                                 }
                             }
                         }
-                        layer.setFilter(function(f) {
+                        myLayer.setFilter(function(f) {
                             var number = f.properties.metadata;
                             return (jQuery.inArray(number, list)!==-1);
                         });
                     });
                 }else{
                     if(cardBtn==true) $('.hotels').show();
-                    layer.setFilter(function(f) {
+                    myLayer.setFilter(function(f) {
                         return f.properties.hotels === true;
                     });
                 }
             }else{
-                layer.setFilter(function(f) {
+                myLayer.setFilter(function(f) {
                     return false;
                 });
             }
@@ -560,7 +578,7 @@ $(document).ready(function() {
             console.log(buttonValue);
             var location = parseInt(buttonValue[0]);
             var player = parseInt(buttonValue[1]);
-            socket.emit('chooselocation', { location: location, player: player, group: groupNumber, aguflag: aguFlag});
+            socket.emit('chooselocation', { location: location, player: player, group: groupNumber});
 
             $('.visualPlayer'+player).hide();
             $('div#visualLocation'+location+' .visualPlayer'+player).show();

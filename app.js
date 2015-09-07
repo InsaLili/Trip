@@ -88,10 +88,6 @@ io.on('connection', function (socket) {
         logger.info('delete note',data);
         io.emit('deletenote', data);
     });
-    socket.on('deleteagu', function(data){
-        logger.info("delete Agu",data);
-        io.emit('deleteagu', data);
-    });
 
     socket.on('vote', function(data){
         logger.info('vote for location',data);
@@ -100,10 +96,6 @@ io.on('connection', function (socket) {
 
     socket.on('filtrateLocation', function(data){
         logger.info('filtrate location', data);
-    });
-
-    socket.on('hideLocation', function(data){
-        logger.info('hide location', data);
     });
 
     socket.on('touchLocationCard', function(data){

@@ -1617,3 +1617,634 @@
 {"level":"info","message":"Experiment Starts!!!!","timestamp":"2015-09-06T16:36:37.306Z"}
 {"level":"info","message":"Experiment Starts!!!!","timestamp":"2015-09-06T16:38:11.112Z"}
 {"level":"info","message":"Experiment Starts!!!!","timestamp":"2015-09-06T16:39:50.840Z"}
+{"level":"info","message":"Experiment Starts!!!!","timestamp":"2015-09-06T16:43:58.625Z"}
+{"level":"info","message":"Experiment Starts!!!!","timestamp":"2015-09-06T16:44:13.647Z"}
+{"level":"info","message":"Experiment Starts!!!!","timestamp":"2015-09-06T16:45:59.544Z"}
+{"level":"info","message":"Experiment Starts!!!!","timestamp":"2015-09-06T16:47:32.493Z"}
+{"level":"info","message":"Experiment Starts!!!!","timestamp":"2015-09-06T16:53:34.783Z"}
+{"step":1,"level":"info","message":"validation","timestamp":"2015-09-06T16:53:36.617Z"}
+{"step":2,"level":"info","message":"validation","timestamp":"2015-09-06T16:53:40.235Z"}
+{"step":3,"level":"info","message":"validation","timestamp":"2015-09-06T16:53:43.067Z"}
+{"level":"info","message":"Experiment Ends!!!!","timestamp":"2015-09-06T16:53:44.837Z"}
+{"level":"info","message":"Experiment Starts!!!!","timestamp":"2015-09-06T19:18:06.817Z"}
+{"step":1,"level":"info","message":"validation","timestamp":"2015-09-06T19:18:08.337Z"}
+{"step":2,"level":"info","message":"validation","timestamp":"2015-09-06T19:18:13.230Z"}
+{"step":3,"level":"info","message":"validation","timestamp":"2015-09-06T19:18:18.762Z"}
+{"step":4,"level":"info","message":"validation","timestamp":"2015-09-06T19:18:22.963Z"}
+{"level":"info","message":"Experiment Ends!!!!","timestamp":"2015-09-06T19:18:28.131Z"}
+{"level":"info","message":"Experiment Starts!!!!","timestamp":"2015-09-06T19:31:55.991Z"}
+{"step":1,"level":"info","message":"validation","timestamp":"2015-09-06T19:32:04.560Z"}
+{"level":"info","message":"Experiment Starts!!!!","timestamp":"2015-09-06T19:32:21.713Z"}
+{"step":1,"level":"info","message":"validation","timestamp":"2015-09-06T19:32:23.607Z"}
+{"step":2,"level":"info","message":"validation","timestamp":"2015-09-06T19:32:28.154Z"}
+{"level":"info","message":"Experiment Ends!!!!","timestamp":"2015-09-06T19:32:33.325Z"}
+{"level":"info","message":"Experiment Starts!!!!","timestamp":"2015-09-06T19:57:51.007Z"}
+{"step":1,"level":"info","message":"validation","timestamp":"2015-09-06T19:57:52.149Z"}
+{"step":2,"level":"info","message":"validation","timestamp":"2015-09-06T19:57:58.955Z"}
+{"level":"info","message":"Experiment Ends!!!!","timestamp":"2015-09-06T19:58:12.483Z"}
+{"level":"info","message":"Experiment Starts!!!!","timestamp":"2015-09-06T20:00:45.485Z"}
+{"step":1,"level":"info","message":"validation","timestamp":"2015-09-06T20:00:47.979Z"}
+{"step":2,"level":"info","message":"validation","timestamp":"2015-09-06T20:00:51.383Z"}
+{"level":"info","message":"Experiment Ends!!!!","timestamp":"2015-09-06T20:00:56.740Z"}
+{"level":"info","message":"Experiment Starts!!!!","timestamp":"2015-09-06T20:01:38.363Z"}
+{"level":"info","message":"Experiment Starts!!!!","timestamp":"2015-09-06T20:06:02.532Z"}
+{"location":"location23","level":"info","message":"touch a location card","timestamp":"2015-09-06T20:06:10.546Z"}
+{"location":"location23","level":"info","message":"touch a location card","timestamp":"2015-09-06T20:06:11.521Z"}
+{"location":"location23","level":"info","message":"touch a location card","timestamp":"2015-09-06T20:06:11.523Z"}
+{"location":"location20","level":"info","message":"touch a location card","timestamp":"2015-09-06T20:06:47.168Z"}
+{"location":"location19","level":"info","message":"touch a location card","timestamp":"2015-09-06T20:06:48.331Z"}
+{"level":"info","message":"Experiment Starts!!!!","timestamp":"2015-09-06T20:07:15.079Z"}
+{"level":"info","message":"Experiment Starts!!!!","timestamp":"2015-09-06T20:08:07.457Z"}
+{"location":"location23","level":"info","message":"touch a location card","timestamp":"2015-09-06T20:08:12.906Z"}
+{"location":"location22","level":"info","message":"touch a location card","timestamp":"2015-09-06T20:08:14.188Z"}
+{"location":"location20","level":"info","message":"touch a location card","timestamp":"2015-09-06T20:08:21.416Z"}
+{"location":20,"player":1,"group":1,"level":"info","message":"choose the location","timestamp":"2015-09-06T20:08:24.207Z"}
+{"location":18,"player":1,"group":1,"level":"info","message":"choose the location","timestamp":"2015-09-06T20:09:20.241Z"}
+{"location":19,"player":1,"group":1,"level":"info","message":"choose the location","timestamp":"2015-09-06T20:09:32.081Z"}
+{"location":19,"group":1,"player":1,"value":true,"level":"info","message":"vote for location","timestamp":"2015-09-06T20:09:38.534Z"}
+{"location":19,"group":1,"player":1,"value":false,"level":"info","message":"vote for location","timestamp":"2015-09-06T20:09:44.477Z"}
+{"location":19,"group":1,"player":1,"value":true,"level":"info","message":"vote for location","timestamp":"2015-09-06T20:09:47.575Z"}
+{"location":"location19","level":"info","message":"touch a location card","timestamp":"2015-09-06T20:09:50.927Z"}
+{"location":19,"group":1,"player":1,"value":false,"level":"info","message":"vote for location","timestamp":"2015-09-06T20:09:55.898Z"}
+{"location":19,"group":1,"player":1,"value":true,"level":"info","message":"vote for location","timestamp":"2015-09-06T20:09:57.153Z"}
+{"location":19,"group":1,"player":1,"value":false,"level":"info","message":"vote for location","timestamp":"2015-09-06T20:10:13.419Z"}
+{"location":"location23","level":"info","message":"touch a location card","timestamp":"2015-09-06T20:10:21.045Z"}
+{"location":"location23","level":"info","message":"touch a location card","timestamp":"2015-09-06T20:10:21.047Z"}
+{"location":"location18","level":"info","message":"touch a location card","timestamp":"2015-09-06T20:10:27.186Z"}
+{"location":"location19","level":"info","message":"touch a location card","timestamp":"2015-09-06T20:10:46.116Z"}
+{"location":"location19","level":"info","message":"touch a location card","timestamp":"2015-09-06T20:10:46.117Z"}
+{"location":"location22","level":"info","message":"touch a location card","timestamp":"2015-09-06T20:10:47.159Z"}
+{"location":"location22","level":"info","message":"touch a location card","timestamp":"2015-09-06T20:10:47.161Z"}
+{"level":"info","message":"Experiment Starts!!!!","timestamp":"2015-09-06T20:15:45.258Z"}
+{"location":"location23","level":"info","message":"touch a location card","timestamp":"2015-09-06T20:15:58.391Z"}
+{"location":"location20","level":"info","message":"touch a location card","timestamp":"2015-09-06T20:15:59.493Z"}
+{"location":"location18","level":"info","message":"touch a location card","timestamp":"2015-09-06T20:16:01.021Z"}
+{"location":"location22","level":"info","message":"touch a location card","timestamp":"2015-09-06T20:16:18.210Z"}
+{"location":"location21","level":"info","message":"touch a location card","timestamp":"2015-09-06T20:16:22.162Z"}
+{"location":"location19","level":"info","message":"touch a location card","timestamp":"2015-09-06T20:16:23.750Z"}
+{"location":"location17","level":"info","message":"touch a location card","timestamp":"2015-09-06T20:16:25.035Z"}
+{"location":"location18","level":"info","message":"touch a location card","timestamp":"2015-09-06T20:16:26.420Z"}
+{"location":"location18","level":"info","message":"touch a location card","timestamp":"2015-09-06T20:16:26.422Z"}
+{"location":"location18","level":"info","message":"touch a location card","timestamp":"2015-09-06T20:16:28.383Z"}
+{"location":"location18","level":"info","message":"touch a location card","timestamp":"2015-09-06T20:16:28.384Z"}
+{"location":"location18","level":"info","message":"touch a location card","timestamp":"2015-09-06T20:16:28.384Z"}
+{"location":23,"player":1,"group":1,"level":"info","message":"choose the location","timestamp":"2015-09-06T20:16:58.824Z"}
+{"location":23,"group":1,"player":1,"value":true,"level":"info","message":"vote for location","timestamp":"2015-09-06T20:17:06.901Z"}
+{"location":23,"group":1,"player":1,"value":false,"level":"info","message":"vote for location","timestamp":"2015-09-06T20:17:21.270Z"}
+{"location":23,"group":1,"player":1,"value":true,"level":"info","message":"vote for location","timestamp":"2015-09-06T20:17:22.959Z"}
+{"location":23,"group":1,"player":1,"value":false,"level":"info","message":"vote for location","timestamp":"2015-09-06T20:17:24.087Z"}
+{"location":"location20","level":"info","message":"touch a location card","timestamp":"2015-09-06T20:17:31.914Z"}
+{"location":"location20","level":"info","message":"touch a location card","timestamp":"2015-09-06T20:17:31.916Z"}
+{"location":19,"player":1,"group":1,"level":"info","message":"choose the location","timestamp":"2015-09-06T20:17:48.166Z"}
+{"location":19,"group":1,"player":1,"value":true,"level":"info","message":"vote for location","timestamp":"2015-09-06T20:17:54.576Z"}
+{"location":19,"group":1,"player":1,"value":false,"level":"info","message":"vote for location","timestamp":"2015-09-06T20:17:58.564Z"}
+{"location":19,"group":1,"player":1,"value":true,"level":"info","message":"vote for location","timestamp":"2015-09-06T20:17:59.691Z"}
+{"level":"info","message":"Experiment Starts!!!!","timestamp":"2015-09-06T20:19:11.595Z"}
+{"location":"location23","level":"info","message":"touch a location card","timestamp":"2015-09-06T20:19:23.209Z"}
+{"location":19,"group":1,"player":1,"value":false,"level":"info","message":"vote for location","timestamp":"2015-09-06T20:19:29.368Z"}
+{"location":19,"group":1,"player":1,"value":true,"level":"info","message":"vote for location","timestamp":"2015-09-06T20:19:38.456Z"}
+{"location":19,"group":1,"player":1,"value":false,"level":"info","message":"vote for location","timestamp":"2015-09-06T20:19:39.524Z"}
+{"location":19,"group":1,"player":1,"value":true,"level":"info","message":"vote for location","timestamp":"2015-09-06T20:19:40.234Z"}
+{"location":"location20","level":"info","message":"touch a location card","timestamp":"2015-09-06T20:19:52.139Z"}
+{"location":17,"player":1,"group":1,"level":"info","message":"choose the location","timestamp":"2015-09-06T20:19:54.540Z"}
+{"location":17,"player":2,"group":1,"level":"info","message":"choose the location","timestamp":"2015-09-06T20:20:07.807Z"}
+{"location":17,"group":1,"player":2,"value":true,"level":"info","message":"vote for location","timestamp":"2015-09-06T20:20:12.676Z"}
+{"location":17,"group":1,"player":2,"value":false,"level":"info","message":"vote for location","timestamp":"2015-09-06T20:20:20.783Z"}
+{"location":"location20","level":"info","message":"touch a location card","timestamp":"2015-09-06T20:20:30.353Z"}
+{"location":"location20","level":"info","message":"touch a location card","timestamp":"2015-09-06T20:20:32.117Z"}
+{"location":"location20","level":"info","message":"touch a location card","timestamp":"2015-09-06T20:20:32.119Z"}
+{"location":20,"player":1,"group":1,"level":"info","message":"choose the location","timestamp":"2015-09-06T20:20:34.866Z"}
+{"location":20,"player":2,"group":1,"level":"info","message":"choose the location","timestamp":"2015-09-06T20:20:36.136Z"}
+{"location":20,"group":1,"player":2,"value":true,"level":"info","message":"vote for location","timestamp":"2015-09-06T20:20:45.165Z"}
+{"location":20,"group":1,"player":2,"value":false,"level":"info","message":"vote for location","timestamp":"2015-09-06T20:21:12.996Z"}
+{"location":20,"group":1,"player":2,"value":true,"level":"info","message":"vote for location","timestamp":"2015-09-06T20:21:14.209Z"}
+{"location":20,"player":1,"group":1,"level":"info","message":"choose the location","timestamp":"2015-09-06T20:21:20.394Z"}
+{"location":20,"group":1,"player":2,"value":false,"level":"info","message":"vote for location","timestamp":"2015-09-06T20:21:25.715Z"}
+{"location":"location22","level":"info","message":"touch a location card","timestamp":"2015-09-06T20:21:36.703Z"}
+{"location":"location22","level":"info","message":"touch a location card","timestamp":"2015-09-06T20:21:37.448Z"}
+{"location":"location22","level":"info","message":"touch a location card","timestamp":"2015-09-06T20:21:37.450Z"}
+{"location":"location20","level":"info","message":"touch a location card","timestamp":"2015-09-06T20:21:51.986Z"}
+{"location":"location20","level":"info","message":"touch a location card","timestamp":"2015-09-06T20:21:51.987Z"}
+{"location":"location20","level":"info","message":"touch a location card","timestamp":"2015-09-06T20:21:51.988Z"}
+{"location":16,"player":1,"group":1,"level":"info","message":"choose the location","timestamp":"2015-09-06T20:21:53.621Z"}
+{"location":16,"player":2,"group":1,"level":"info","message":"choose the location","timestamp":"2015-09-06T20:21:58.631Z"}
+{"location":16,"group":1,"player":2,"value":true,"level":"info","message":"vote for location","timestamp":"2015-09-06T20:22:06.049Z"}
+{"location":"location22","level":"info","message":"touch a location card","timestamp":"2015-09-06T20:22:14.078Z"}
+{"location":"location22","level":"info","message":"touch a location card","timestamp":"2015-09-06T20:22:14.079Z"}
+{"location":"location22","level":"info","message":"touch a location card","timestamp":"2015-09-06T20:22:14.080Z"}
+{"location":"location19","level":"info","message":"touch a location card","timestamp":"2015-09-06T20:22:15.167Z"}
+{"location":"location18","level":"info","message":"touch a location card","timestamp":"2015-09-06T20:22:16.317Z"}
+{"location":"location17","level":"info","message":"touch a location card","timestamp":"2015-09-06T20:22:17.791Z"}
+{"location":"location16","level":"info","message":"touch a location card","timestamp":"2015-09-06T20:22:18.865Z"}
+{"location":16,"group":1,"player":2,"value":false,"level":"info","message":"vote for location","timestamp":"2015-09-06T20:22:21.616Z"}
+{"location":16,"group":1,"player":2,"value":true,"level":"info","message":"vote for location","timestamp":"2015-09-06T20:22:23.033Z"}
+{"location":16,"group":1,"player":2,"value":false,"level":"info","message":"vote for location","timestamp":"2015-09-06T20:22:23.722Z"}
+{"location":16,"group":1,"player":2,"value":true,"level":"info","message":"vote for location","timestamp":"2015-09-06T20:22:32.150Z"}
+{"location":16,"group":1,"player":2,"value":false,"level":"info","message":"vote for location","timestamp":"2015-09-06T20:22:40.556Z"}
+{"location":18,"player":1,"group":1,"level":"info","message":"choose the location","timestamp":"2015-09-06T20:24:53.158Z"}
+{"location":"location19","level":"info","message":"touch a location card","timestamp":"2015-09-06T20:24:54.549Z"}
+{"location":"location19","level":"info","message":"touch a location card","timestamp":"2015-09-06T20:24:54.550Z"}
+{"location":18,"player":2,"group":1,"level":"info","message":"choose the location","timestamp":"2015-09-06T20:24:55.992Z"}
+{"id":"note_1_18_1_1","content":"A free encyclopedia built collaboratively using wiki software. (Creative Commons Attribution-ShareAlike License).","location":18,"player":1,"notes":4,"level":"info","message":"add note","timestamp":"2015-09-06T20:25:04.627Z"}
+{"id":"note_1_18_1_2","content":"A free encyclopedia built collaboratively using wiki software. (Creative Commons Attribution-ShareAlike License).","location":18,"player":1,"notes":5,"level":"info","message":"add note","timestamp":"2015-09-06T20:25:10.372Z"}
+{"id":"note_1_18_1_3","content":"A free encyclopedia built collaboratively using wiki software. (Creative Commons Attribution-ShareAlike License).","location":18,"player":1,"notes":6,"level":"info","message":"add note","timestamp":"2015-09-06T20:25:12.017Z"}
+{"location":18,"player":1,"group":1,"level":"info","message":"choose the location","timestamp":"2015-09-06T20:25:57.488Z"}
+{"location":18,"player":1,"group":1,"level":"info","message":"choose the location","timestamp":"2015-09-06T20:26:23.967Z"}
+{"level":"info","message":"Experiment Starts!!!!","timestamp":"2015-09-06T20:32:39.550Z"}
+{"location":22,"player":1,"group":1,"level":"info","message":"choose the location","timestamp":"2015-09-06T20:32:42.595Z"}
+{"id":"note_1_22_1_1","content":"Default value. Elements render in order, as they appear in the document flow","location":22,"player":1,"notes":7,"level":"info","message":"add note","timestamp":"2015-09-06T20:32:52.041Z"}
+{"id":"note_1_22_1_2","content":"Default value. Elements render in order, as they appear in the document flowDefault value. Elements render in order, as they appear in the document flowDefault value. Elements render in order, as they appear in the document flowDefault value. Elements render in order, as they appear in the document flow","location":22,"player":1,"notes":8,"level":"info","message":"add note","timestamp":"2015-09-06T20:32:57.115Z"}
+{"location":"location23","level":"info","message":"touch a location card","timestamp":"2015-09-06T20:33:06.450Z"}
+{"location":"location22","level":"info","message":"touch a location card","timestamp":"2015-09-06T20:33:07.664Z"}
+{"location":"location18","level":"info","message":"touch a location card","timestamp":"2015-09-06T20:33:10.158Z"}
+{"location":"location18","level":"info","message":"touch a location card","timestamp":"2015-09-06T20:33:15.850Z"}
+{"location":"location18","level":"info","message":"touch a location card","timestamp":"2015-09-06T20:33:15.857Z"}
+{"id":"note_1_22_1_3","content":"dd","location":22,"player":1,"notes":9,"level":"info","message":"add note","timestamp":"2015-09-06T20:33:19.249Z"}
+{"location":18,"player":1,"group":1,"level":"info","message":"choose the location","timestamp":"2015-09-06T20:33:52.122Z"}
+{"id":"note_1_18_1_1","location":18,"player":1,"notes":17,"level":"info","message":"delete note","timestamp":"2015-09-06T20:33:57.152Z"}
+{"id":"note_1_18_1_2","location":18,"player":1,"notes":16,"level":"info","message":"delete note","timestamp":"2015-09-06T20:34:06.473Z"}
+{"id":"note_1_18_1_4","content":"d","location":18,"player":1,"notes":17,"level":"info","message":"add note","timestamp":"2015-09-06T20:34:20.317Z"}
+{"id":"note_1_18_1_4","location":18,"player":1,"notes":16,"level":"info","message":"delete note","timestamp":"2015-09-06T20:34:33.312Z"}
+{"id":"note_1_18_1_3","location":18,"player":1,"notes":15,"level":"info","message":"delete note","timestamp":"2015-09-06T20:34:36.177Z"}
+{"id":"note_1_18_1_1","content":"Default value. Elements render in order, as they appear in the document flow","location":18,"player":1,"notes":16,"level":"info","message":"add note","timestamp":"2015-09-06T20:34:41.536Z"}
+{"id":"note_1_18_1_2","content":"Default value. Elements render in order, as they appear in the document flow","location":18,"player":1,"notes":17,"level":"info","message":"add note","timestamp":"2015-09-06T20:34:43.919Z"}
+{"id":"note_1_18_1_3","content":"Default value. Elements render in order, as they appear in the document flow","location":18,"player":1,"notes":18,"level":"info","message":"add note","timestamp":"2015-09-06T20:34:46.184Z"}
+{"id":"note_1_18_1_1","location":18,"player":1,"notes":17,"level":"info","message":"delete note","timestamp":"2015-09-06T20:34:49.713Z"}
+{"location":18,"player":1,"group":1,"level":"info","message":"choose the location","timestamp":"2015-09-06T20:35:28.620Z"}
+{"id":"note_1_18_1_3","location":18,"player":1,"notes":7,"level":"info","message":"delete note","timestamp":"2015-09-06T20:35:32.802Z"}
+{"id":"note_1_18_1_3","content":"Default value. Elements render in order, as they appear in the document flowDefault value. Elements render in order, as they appear in the document flowDefault value. Elements render in order, as they appear in the document flow","location":18,"player":1,"notes":8,"level":"info","message":"add note","timestamp":"2015-09-06T20:35:35.845Z"}
+{"id":"note_1_18_1_2","location":18,"player":1,"notes":7,"level":"info","message":"delete note","timestamp":"2015-09-06T20:35:37.371Z"}
+{"id":"note_1_18_1_3","location":18,"player":1,"notes":6,"level":"info","message":"delete note","timestamp":"2015-09-06T20:35:39.930Z"}
+{"id":"note_1_18_1_1","content":"Default value. Elements render in order, as they appear in the document flowDefault value. Elements render in order, as they appear in the document flowDefault value. Elements render in order, as they appear in the document flowDefault value. Elements render in order, as they appear in the document flowDefault value. Elements render in order, as they appear in the document flowDefault value. Elements render in order, as they appear in the document flowDefault value. Elements render in order, as they appear in the document flow","location":18,"player":1,"notes":7,"level":"info","message":"add note","timestamp":"2015-09-06T20:35:43.097Z"}
+{"id":"note_1_18_1_2","content":"Default value. Elements render in order, as they appear in the document flow","location":18,"player":1,"notes":8,"level":"info","message":"add note","timestamp":"2015-09-06T20:35:45.957Z"}
+{"id":"note_1_18_1_3","content":"Default value. Elements render in order, as they appear in the document flow","location":18,"player":1,"notes":9,"level":"info","message":"add note","timestamp":"2015-09-06T20:35:47.237Z"}
+{"id":"note_1_18_1_2","location":18,"player":1,"notes":8,"level":"info","message":"delete note","timestamp":"2015-09-06T20:35:50.961Z"}
+{"id":"note_1_18_1_1","location":18,"player":1,"notes":7,"level":"info","message":"delete note","timestamp":"2015-09-06T20:35:53.125Z"}
+{"id":"note_1_18_1_4","content":"f","location":18,"player":1,"notes":8,"level":"info","message":"add note","timestamp":"2015-09-06T20:36:03.351Z"}
+{"id":"note_1_18_1_4","location":18,"player":1,"notes":7,"level":"info","message":"delete note","timestamp":"2015-09-06T20:36:06.898Z"}
+{"id":"note_1_18_1_3","location":18,"player":1,"notes":6,"level":"info","message":"delete note","timestamp":"2015-09-06T20:36:08.542Z"}
+{"id":"note_1_18_1_1","content":"dd","location":18,"player":1,"notes":7,"level":"info","message":"add note","timestamp":"2015-09-06T20:36:12.849Z"}
+{"id":"note_1_18_1_1","location":18,"player":1,"notes":6,"level":"info","message":"delete note","timestamp":"2015-09-06T20:36:15.330Z"}
+{"id":"note_1_18_1_1","content":"d","location":18,"player":1,"notes":7,"level":"info","message":"add note","timestamp":"2015-09-06T20:36:17.150Z"}
+{"id":"note_1_18_1_1","location":18,"player":1,"notes":6,"level":"info","message":"delete note","timestamp":"2015-09-06T20:36:18.993Z"}
+{"location":22,"player":1,"group":1,"level":"info","message":"choose the location","timestamp":"2015-09-06T20:36:30.771Z"}
+{"location":"location19","level":"info","message":"touch a location card","timestamp":"2015-09-06T20:36:43.735Z"}
+{"step":1,"level":"info","message":"validation","timestamp":"2015-09-06T20:37:23.886Z"}
+{"location":"location18","level":"info","message":"touch a location card","timestamp":"2015-09-06T20:38:06.846Z"}
+{"location":"location18","level":"info","message":"touch a location card","timestamp":"2015-09-06T20:38:06.847Z"}
+{"location":"location18","level":"info","message":"touch a location card","timestamp":"2015-09-06T20:38:06.848Z"}
+{"level":"info","message":"Experiment Starts!!!!","timestamp":"2015-09-06T20:41:51.529Z"}
+{"button":"attractions","level":"info","message":"filtrate location","timestamp":"2015-09-06T20:42:15.468Z"}
+{"button":"hotels","level":"info","message":"filtrate location","timestamp":"2015-09-06T20:42:21.519Z"}
+{"button":"heart","level":"info","message":"filtrate location","timestamp":"2015-09-06T20:42:23.302Z"}
+{"button":"card","level":"info","message":"filtrate location","timestamp":"2015-09-06T20:42:27.313Z"}
+{"button":"heart","level":"info","message":"filtrate location","timestamp":"2015-09-06T20:42:29.641Z"}
+{"level":"info","message":"Experiment Starts!!!!","timestamp":"2015-09-06T20:43:45.549Z"}
+{"level":"info","message":"Experiment Starts!!!!","timestamp":"2015-09-06T20:43:49.939Z"}
+{"button":"heart","level":"info","message":"filtrate location","timestamp":"2015-09-06T20:43:52.076Z"}
+{"level":"info","message":"Experiment Starts!!!!","timestamp":"2015-09-06T20:44:45.653Z"}
+{"button":"attractions","level":"info","message":"filtrate location","timestamp":"2015-09-06T20:44:46.868Z"}
+{"location":3,"player":1,"group":1,"level":"info","message":"choose the location","timestamp":"2015-09-06T20:44:52.302Z"}
+{"location":3,"group":1,"player":1,"value":true,"level":"info","message":"vote for location","timestamp":"2015-09-06T20:45:01.918Z"}
+{"button":"heart","level":"info","message":"filtrate location","timestamp":"2015-09-06T20:45:07.609Z"}
+{"button":"card","level":"info","message":"filtrate location","timestamp":"2015-09-06T20:45:09.384Z"}
+{"button":"hotels","level":"info","message":"filtrate location","timestamp":"2015-09-06T20:45:12.429Z"}
+{"button":"heart","level":"info","message":"filtrate location","timestamp":"2015-09-06T20:45:16.713Z"}
+{"button":"attractions","level":"info","message":"filtrate location","timestamp":"2015-09-06T20:45:18.811Z"}
+{"location":"location23","level":"info","message":"touch a location card","timestamp":"2015-09-06T20:45:21.305Z"}
+{"button":"card","level":"info","message":"filtrate location","timestamp":"2015-09-06T20:45:22.145Z"}
+{"location":16,"player":1,"group":1,"level":"info","message":"choose the location","timestamp":"2015-09-06T20:45:24.873Z"}
+{"id":"note_1_16_1_1","content":"gdd","location":16,"player":1,"notes":13,"level":"info","message":"add note","timestamp":"2015-09-06T20:45:30.110Z"}
+{"button":"heart","level":"info","message":"filtrate location","timestamp":"2015-09-06T20:45:33.147Z"}
+{"location":16,"group":1,"player":1,"value":false,"level":"info","message":"vote for location","timestamp":"2015-09-06T20:45:40.235Z"}
+{"location":16,"group":1,"player":1,"value":true,"level":"info","message":"vote for location","timestamp":"2015-09-06T20:45:41.012Z"}
+{"button":"heart","level":"info","message":"filtrate location","timestamp":"2015-09-06T20:45:52.005Z"}
+{"button":"heart","level":"info","message":"filtrate location","timestamp":"2015-09-06T20:45:52.608Z"}
+{"button":"attractions","level":"info","message":"filtrate location","timestamp":"2015-09-06T20:45:57.864Z"}
+{"button":"attractions","level":"info","message":"filtrate location","timestamp":"2015-09-06T20:45:59.955Z"}
+{"button":"heart","level":"info","message":"filtrate location","timestamp":"2015-09-06T20:46:02.205Z"}
+{"location":17,"player":1,"group":1,"level":"info","message":"choose the location","timestamp":"2015-09-06T20:46:07.666Z"}
+{"button":"heart","level":"info","message":"filtrate location","timestamp":"2015-09-06T20:46:10.792Z"}
+{"location":17,"group":1,"player":1,"value":false,"level":"info","message":"vote for location","timestamp":"2015-09-06T20:46:16.257Z"}
+{"location":17,"group":1,"player":1,"value":true,"level":"info","message":"vote for location","timestamp":"2015-09-06T20:46:16.936Z"}
+{"button":"card","level":"info","message":"filtrate location","timestamp":"2015-09-06T20:46:19.615Z"}
+{"location":"location17","level":"info","message":"touch a location card","timestamp":"2015-09-06T20:46:22.146Z"}
+{"location":17,"group":1,"player":1,"value":false,"level":"info","message":"vote for location","timestamp":"2015-09-06T20:46:35.246Z"}
+{"button":"heart","level":"info","message":"filtrate location","timestamp":"2015-09-06T20:46:41.392Z"}
+{"button":"heart","level":"info","message":"filtrate location","timestamp":"2015-09-06T20:46:45.764Z"}
+{"location":16,"player":1,"group":1,"level":"info","message":"choose the location","timestamp":"2015-09-06T20:46:48.033Z"}
+{"location":16,"group":1,"player":1,"value":true,"level":"info","message":"vote for location","timestamp":"2015-09-06T20:46:51.722Z"}
+{"location":16,"group":1,"player":1,"value":false,"level":"info","message":"vote for location","timestamp":"2015-09-06T20:46:56.542Z"}
+{"location":16,"group":1,"player":1,"value":true,"level":"info","message":"vote for location","timestamp":"2015-09-06T20:47:07.944Z"}
+{"location":16,"group":1,"player":1,"value":false,"level":"info","message":"vote for location","timestamp":"2015-09-06T20:47:09.161Z"}
+{"location":16,"group":1,"player":1,"value":true,"level":"info","message":"vote for location","timestamp":"2015-09-06T20:47:09.804Z"}
+{"step":1,"level":"info","message":"validation","timestamp":"2015-09-06T20:47:29.978Z"}
+{"step":2,"level":"info","message":"validation","timestamp":"2015-09-06T20:47:42.512Z"}
+{"level":"info","message":"Experiment Ends!!!!","timestamp":"2015-09-06T20:47:49.167Z"}
+{"level":"info","message":"Experiment Starts!!!!","timestamp":"2015-09-06T20:47:56.372Z"}
+{"level":"info","message":"Experiment Starts!!!!","timestamp":"2015-09-06T20:53:24.700Z"}
+{"button":"attractions","value":true,"level":"info","message":"filtrate location","timestamp":"2015-09-06T20:53:29.090Z"}
+{"button":"attractions","value":false,"level":"info","message":"filtrate location","timestamp":"2015-09-06T20:53:36.609Z"}
+{"button":"hotels","value":true,"level":"info","message":"filtrate location","timestamp":"2015-09-06T20:53:39.362Z"}
+{"button":"heart","value":true,"level":"info","message":"filtrate location","timestamp":"2015-09-06T20:53:41.222Z"}
+{"level":"info","message":"Experiment Starts!!!!","timestamp":"2015-09-06T20:55:35.596Z"}
+{"button":"attractions","cardBtn":false,"heartBtn":false,"hotelsBtn":false,"attractionBtn":true,"level":"info","message":"filtrate location","timestamp":"2015-09-06T20:55:37.094Z"}
+{"location":3,"player":1,"group":1,"level":"info","message":"choose the location","timestamp":"2015-09-06T21:04:35.415Z"}
+{"location":3,"player":2,"group":1,"level":"info","message":"choose the location","timestamp":"2015-09-06T21:04:39.580Z"}
+{"level":"info","message":"Experiment Starts!!!!","timestamp":"2015-09-06T21:22:08.019Z"}
+{"button":"attractions","cardBtn":false,"heartBtn":false,"hotelsBtn":false,"attractionBtn":true,"level":"info","message":"filtrate location","timestamp":"2015-09-06T21:22:08.984Z"}
+{"location":7,"player":1,"group":1,"level":"info","message":"choose the location","timestamp":"2015-09-06T21:22:17.839Z"}
+{"location":6,"player":1,"group":1,"level":"info","message":"choose the location","timestamp":"2015-09-06T21:22:31.434Z"}
+{"location":13,"player":1,"group":1,"level":"info","message":"choose the location","timestamp":"2015-09-06T21:23:56.931Z"}
+{"location":14,"player":1,"group":1,"level":"info","message":"choose the location","timestamp":"2015-09-06T21:24:08.383Z"}
+{"location":8,"player":1,"group":1,"level":"info","message":"choose the location","timestamp":"2015-09-06T21:24:22.685Z"}
+{"location":4,"player":1,"group":1,"level":"info","message":"choose the location","timestamp":"2015-09-06T21:24:48.091Z"}
+{"location":9,"player":1,"group":1,"level":"info","message":"choose the location","timestamp":"2015-09-06T21:25:08.477Z"}
+{"location":12,"player":1,"group":1,"level":"info","message":"choose the location","timestamp":"2015-09-06T21:25:22.685Z"}
+{"location":11,"player":1,"group":1,"level":"info","message":"choose the location","timestamp":"2015-09-06T21:25:33.474Z"}
+{"location":10,"player":1,"group":1,"level":"info","message":"choose the location","timestamp":"2015-09-06T21:25:45.469Z"}
+{"location":5,"player":1,"group":1,"level":"info","message":"choose the location","timestamp":"2015-09-06T21:25:51.609Z"}
+{"location":3,"player":1,"group":1,"level":"info","message":"choose the location","timestamp":"2015-09-06T21:25:58.825Z"}
+{"location":15,"player":1,"group":1,"level":"info","message":"choose the location","timestamp":"2015-09-06T21:26:08.003Z"}
+{"location":2,"player":1,"group":1,"level":"info","message":"choose the location","timestamp":"2015-09-06T21:26:14.197Z"}
+{"location":1,"player":1,"group":1,"level":"info","message":"choose the location","timestamp":"2015-09-06T21:26:30.468Z"}
+{"button":"heart","cardBtn":false,"heartBtn":true,"hotelsBtn":false,"attractionBtn":true,"level":"info","message":"filtrate location","timestamp":"2015-09-06T21:27:38.333Z"}
+{"button":"card","cardBtn":true,"heartBtn":true,"hotelsBtn":false,"attractionBtn":true,"level":"info","message":"filtrate location","timestamp":"2015-09-06T21:27:43.095Z"}
+{"location":1,"group":1,"player":1,"value":true,"level":"info","message":"vote for location","timestamp":"2015-09-06T21:27:49.921Z"}
+{"button":"heart","cardBtn":true,"heartBtn":false,"hotelsBtn":false,"attractionBtn":true,"level":"info","message":"filtrate location","timestamp":"2015-09-06T21:27:57.233Z"}
+{"button":"heart","cardBtn":true,"heartBtn":true,"hotelsBtn":false,"attractionBtn":true,"level":"info","message":"filtrate location","timestamp":"2015-09-06T21:27:58.010Z"}
+{"location":1,"group":1,"player":1,"value":false,"level":"info","message":"vote for location","timestamp":"2015-09-06T21:28:01.130Z"}
+{"location":1,"group":1,"player":1,"value":true,"level":"info","message":"vote for location","timestamp":"2015-09-06T21:28:02.307Z"}
+{"location":1,"group":1,"player":1,"value":false,"level":"info","message":"vote for location","timestamp":"2015-09-06T21:28:09.082Z"}
+{"location":1,"group":1,"player":1,"value":true,"level":"info","message":"vote for location","timestamp":"2015-09-06T21:28:09.845Z"}
+{"location":1,"group":1,"player":1,"value":false,"level":"info","message":"vote for location","timestamp":"2015-09-06T21:28:10.527Z"}
+{"location":1,"group":1,"player":1,"value":true,"level":"info","message":"vote for location","timestamp":"2015-09-06T21:28:11.126Z"}
+{"location":1,"group":1,"player":1,"value":false,"level":"info","message":"vote for location","timestamp":"2015-09-06T21:28:38.597Z"}
+{"location":3,"player":1,"group":1,"level":"info","message":"choose the location","timestamp":"2015-09-06T21:28:47.217Z"}
+{"location":3,"group":1,"player":1,"value":true,"level":"info","message":"vote for location","timestamp":"2015-09-06T21:28:54.742Z"}
+{"location":3,"group":1,"player":1,"value":false,"level":"info","message":"vote for location","timestamp":"2015-09-06T21:28:58.728Z"}
+{"location":3,"group":1,"player":1,"value":true,"level":"info","message":"vote for location","timestamp":"2015-09-06T21:28:59.955Z"}
+{"location":3,"group":1,"player":1,"value":false,"level":"info","message":"vote for location","timestamp":"2015-09-06T21:29:00.858Z"}
+{"location":3,"group":1,"player":1,"value":true,"level":"info","message":"vote for location","timestamp":"2015-09-06T21:29:01.538Z"}
+{"button":"heart","cardBtn":true,"heartBtn":false,"hotelsBtn":false,"attractionBtn":true,"level":"info","message":"filtrate location","timestamp":"2015-09-06T21:29:07.098Z"}
+{"button":"card","cardBtn":false,"heartBtn":false,"hotelsBtn":false,"attractionBtn":true,"level":"info","message":"filtrate location","timestamp":"2015-09-06T21:29:09.519Z"}
+{"location":8,"player":1,"group":1,"level":"info","message":"choose the location","timestamp":"2015-09-06T21:29:12.725Z"}
+{"button":"heart","cardBtn":false,"heartBtn":true,"hotelsBtn":false,"attractionBtn":true,"level":"info","message":"filtrate location","timestamp":"2015-09-06T21:29:15.958Z"}
+{"button":"card","cardBtn":true,"heartBtn":true,"hotelsBtn":false,"attractionBtn":true,"level":"info","message":"filtrate location","timestamp":"2015-09-06T21:29:17.738Z"}
+{"location":8,"group":1,"player":1,"value":false,"level":"info","message":"vote for location","timestamp":"2015-09-06T21:30:05.588Z"}
+{"location":3,"player":1,"group":1,"level":"info","message":"choose the location","timestamp":"2015-09-06T21:33:53.525Z"}
+{"location":3,"group":1,"player":1,"value":false,"level":"info","message":"vote for location","timestamp":"2015-09-06T21:34:01.374Z"}
+{"location":3,"group":1,"player":1,"value":true,"level":"info","message":"vote for location","timestamp":"2015-09-06T21:34:06.063Z"}
+{"button":"heart","cardBtn":true,"heartBtn":false,"hotelsBtn":false,"attractionBtn":true,"level":"info","message":"filtrate location","timestamp":"2015-09-06T21:34:12.244Z"}
+{"button":"card","cardBtn":false,"heartBtn":false,"hotelsBtn":false,"attractionBtn":true,"level":"info","message":"filtrate location","timestamp":"2015-09-06T21:34:14.166Z"}
+{"location":2,"player":1,"group":1,"level":"info","message":"choose the location","timestamp":"2015-09-06T21:34:16.097Z"}
+{"button":"heart","cardBtn":false,"heartBtn":true,"hotelsBtn":false,"attractionBtn":true,"level":"info","message":"filtrate location","timestamp":"2015-09-06T21:34:20.087Z"}
+{"button":"card","cardBtn":true,"heartBtn":true,"hotelsBtn":false,"attractionBtn":true,"level":"info","message":"filtrate location","timestamp":"2015-09-06T21:34:21.656Z"}
+{"location":2,"group":1,"player":1,"value":false,"level":"info","message":"vote for location","timestamp":"2015-09-06T21:34:26.793Z"}
+{"location":2,"group":1,"player":1,"value":true,"level":"info","message":"vote for location","timestamp":"2015-09-06T21:34:33.258Z"}
+{"location":2,"group":1,"player":1,"value":false,"level":"info","message":"vote for location","timestamp":"2015-09-06T21:34:46.280Z"}
+{"location":2,"group":1,"player":1,"value":true,"level":"info","message":"vote for location","timestamp":"2015-09-06T21:34:47.757Z"}
+{"location":2,"group":1,"player":1,"value":false,"level":"info","message":"vote for location","timestamp":"2015-09-06T21:34:49.766Z"}
+{"location":2,"group":1,"player":1,"value":true,"level":"info","message":"vote for location","timestamp":"2015-09-06T21:34:50.397Z"}
+{"button":"heart","cardBtn":true,"heartBtn":false,"hotelsBtn":false,"attractionBtn":true,"level":"info","message":"filtrate location","timestamp":"2015-09-06T21:35:01.960Z"}
+{"location":6,"player":1,"group":1,"level":"info","message":"choose the location","timestamp":"2015-09-06T21:35:07.035Z"}
+{"button":"card","cardBtn":false,"heartBtn":false,"hotelsBtn":false,"attractionBtn":true,"level":"info","message":"filtrate location","timestamp":"2015-09-06T21:35:08.710Z"}
+{"button":"heart","cardBtn":false,"heartBtn":true,"hotelsBtn":false,"attractionBtn":true,"level":"info","message":"filtrate location","timestamp":"2015-09-06T21:35:09.809Z"}
+{"button":"card","cardBtn":true,"heartBtn":true,"hotelsBtn":false,"attractionBtn":true,"level":"info","message":"filtrate location","timestamp":"2015-09-06T21:35:11.456Z"}
+{"location":"location3","level":"info","message":"touch a location card","timestamp":"2015-09-06T21:35:13.415Z"}
+{"button":"attractions","cardBtn":true,"heartBtn":true,"hotelsBtn":false,"attractionBtn":false,"level":"info","message":"filtrate location","timestamp":"2015-09-06T21:39:19.898Z"}
+{"button":"attractions","cardBtn":true,"heartBtn":true,"hotelsBtn":false,"attractionBtn":true,"level":"info","message":"filtrate location","timestamp":"2015-09-06T21:39:20.356Z"}
+{"button":"heart","cardBtn":true,"heartBtn":false,"hotelsBtn":false,"attractionBtn":true,"level":"info","message":"filtrate location","timestamp":"2015-09-06T21:39:21.454Z"}
+{"location":8,"player":1,"group":1,"level":"info","message":"choose the location","timestamp":"2015-09-06T21:39:23.760Z"}
+{"location":8,"player":1,"group":1,"level":"info","message":"choose the location","timestamp":"2015-09-06T21:39:29.382Z"}
+{"location":8,"player":1,"group":1,"level":"info","message":"choose the location","timestamp":"2015-09-06T21:39:56.291Z"}
+{"location":8,"player":3,"group":1,"level":"info","message":"choose the location","timestamp":"2015-09-06T21:41:11.468Z"}
+{"button":"heart","cardBtn":true,"heartBtn":true,"hotelsBtn":false,"attractionBtn":true,"level":"info","message":"filtrate location","timestamp":"2015-09-06T21:41:44.137Z"}
+{"location":8,"group":1,"player":3,"value":true,"level":"info","message":"vote for location","timestamp":"2015-09-06T21:41:52.754Z"}
+{"location":8,"group":1,"player":3,"value":false,"level":"info","message":"vote for location","timestamp":"2015-09-06T21:42:04.298Z"}
+{"location":8,"group":1,"player":3,"value":true,"level":"info","message":"vote for location","timestamp":"2015-09-06T21:42:06.051Z"}
+{"location":8,"group":1,"player":3,"value":false,"level":"info","message":"vote for location","timestamp":"2015-09-06T21:42:06.732Z"}
+{"button":"heart","cardBtn":true,"heartBtn":false,"hotelsBtn":false,"attractionBtn":true,"level":"info","message":"filtrate location","timestamp":"2015-09-06T21:42:13.908Z"}
+{"location":2,"player":1,"group":1,"level":"info","message":"choose the location","timestamp":"2015-09-06T21:42:16.345Z"}
+{"location":2,"player":3,"group":1,"level":"info","message":"choose the location","timestamp":"2015-09-06T21:42:17.765Z"}
+{"button":"heart","cardBtn":true,"heartBtn":true,"hotelsBtn":false,"attractionBtn":true,"level":"info","message":"filtrate location","timestamp":"2015-09-06T21:42:26.639Z"}
+{"location":2,"group":1,"player":3,"value":true,"level":"info","message":"vote for location","timestamp":"2015-09-06T21:42:30.218Z"}
+{"location":2,"group":1,"player":3,"value":false,"level":"info","message":"vote for location","timestamp":"2015-09-06T21:43:05.657Z"}
+{"location":2,"group":1,"player":3,"value":true,"level":"info","message":"vote for location","timestamp":"2015-09-06T21:43:14.704Z"}
+{"location":2,"group":1,"player":3,"value":false,"level":"info","message":"vote for location","timestamp":"2015-09-06T21:43:30.585Z"}
+{"button":"card","cardBtn":false,"heartBtn":true,"hotelsBtn":false,"attractionBtn":true,"level":"info","message":"filtrate location","timestamp":"2015-09-06T21:43:48.861Z"}
+{"button":"heart","cardBtn":false,"heartBtn":false,"hotelsBtn":false,"attractionBtn":true,"level":"info","message":"filtrate location","timestamp":"2015-09-06T21:43:49.435Z"}
+{"location":9,"player":1,"group":1,"level":"info","message":"choose the location","timestamp":"2015-09-06T21:43:51.792Z"}
+{"location":9,"player":3,"group":1,"level":"info","message":"choose the location","timestamp":"2015-09-06T21:43:53.360Z"}
+{"button":"heart","cardBtn":false,"heartBtn":true,"hotelsBtn":false,"attractionBtn":true,"level":"info","message":"filtrate location","timestamp":"2015-09-06T21:43:58.207Z"}
+{"button":"card","cardBtn":true,"heartBtn":true,"hotelsBtn":false,"attractionBtn":true,"level":"info","message":"filtrate location","timestamp":"2015-09-06T21:44:00.264Z"}
+{"location":9,"group":1,"player":3,"value":true,"level":"info","message":"vote for location","timestamp":"2015-09-06T21:45:07.715Z"}
+{"location":9,"group":1,"player":3,"value":false,"level":"info","message":"vote for location","timestamp":"2015-09-06T21:45:17.948Z"}
+{"location":9,"group":1,"player":3,"value":true,"level":"info","message":"vote for location","timestamp":"2015-09-06T21:45:18.828Z"}
+{"location":9,"group":1,"player":3,"value":false,"level":"info","message":"vote for location","timestamp":"2015-09-06T21:45:19.537Z"}
+{"button":"card","cardBtn":false,"heartBtn":true,"hotelsBtn":false,"attractionBtn":true,"level":"info","message":"filtrate location","timestamp":"2015-09-06T21:45:24.117Z"}
+{"button":"heart","cardBtn":false,"heartBtn":false,"hotelsBtn":false,"attractionBtn":true,"level":"info","message":"filtrate location","timestamp":"2015-09-06T21:45:24.994Z"}
+{"location":1,"player":3,"group":1,"level":"info","message":"choose the location","timestamp":"2015-09-06T21:45:27.622Z"}
+{"button":"heart","cardBtn":false,"heartBtn":true,"hotelsBtn":false,"attractionBtn":true,"level":"info","message":"filtrate location","timestamp":"2015-09-06T21:45:35.685Z"}
+{"button":"card","cardBtn":true,"heartBtn":true,"hotelsBtn":false,"attractionBtn":true,"level":"info","message":"filtrate location","timestamp":"2015-09-06T21:45:38.128Z"}
+{"location":1,"group":1,"player":3,"value":true,"level":"info","message":"vote for location","timestamp":"2015-09-06T21:45:47.226Z"}
+{"location":1,"group":1,"player":3,"value":false,"level":"info","message":"vote for location","timestamp":"2015-09-06T21:45:54.734Z"}
+{"location":1,"group":1,"player":3,"value":true,"level":"info","message":"vote for location","timestamp":"2015-09-06T21:45:55.561Z"}
+{"location":1,"group":1,"player":3,"value":false,"level":"info","message":"vote for location","timestamp":"2015-09-06T21:45:58.946Z"}
+{"location":1,"group":1,"player":3,"value":true,"level":"info","message":"vote for location","timestamp":"2015-09-06T21:45:59.652Z"}
+{"button":"card","cardBtn":false,"heartBtn":true,"hotelsBtn":false,"attractionBtn":true,"level":"info","message":"filtrate location","timestamp":"2015-09-06T21:46:19.389Z"}
+{"button":"heart","cardBtn":false,"heartBtn":false,"hotelsBtn":false,"attractionBtn":true,"level":"info","message":"filtrate location","timestamp":"2015-09-06T21:46:19.955Z"}
+{"location":4,"player":3,"group":1,"level":"info","message":"choose the location","timestamp":"2015-09-06T21:46:24.359Z"}
+{"button":"heart","cardBtn":false,"heartBtn":true,"hotelsBtn":false,"attractionBtn":true,"level":"info","message":"filtrate location","timestamp":"2015-09-06T21:46:26.025Z"}
+{"button":"card","cardBtn":true,"heartBtn":true,"hotelsBtn":false,"attractionBtn":true,"level":"info","message":"filtrate location","timestamp":"2015-09-06T21:46:29.557Z"}
+{"location":4,"group":1,"player":3,"value":false,"level":"info","message":"vote for location","timestamp":"2015-09-06T21:46:46.344Z"}
+{"location":4,"group":1,"player":3,"value":true,"level":"info","message":"vote for location","timestamp":"2015-09-06T21:46:57.366Z"}
+{"location":4,"group":1,"player":3,"value":false,"level":"info","message":"vote for location","timestamp":"2015-09-06T21:46:59.784Z"}
+{"location":4,"group":1,"player":3,"value":true,"level":"info","message":"vote for location","timestamp":"2015-09-06T21:47:01.264Z"}
+{"location":4,"group":1,"player":3,"value":false,"level":"info","message":"vote for location","timestamp":"2015-09-06T21:47:04.901Z"}
+{"location":4,"group":1,"player":3,"value":true,"level":"info","message":"vote for location","timestamp":"2015-09-06T21:47:07.861Z"}
+{"location":4,"group":1,"player":3,"value":false,"level":"info","message":"vote for location","timestamp":"2015-09-06T21:47:09.054Z"}
+{"location":4,"group":1,"player":3,"value":true,"level":"info","message":"vote for location","timestamp":"2015-09-06T21:47:11.075Z"}
+{"location":4,"group":1,"player":3,"value":false,"level":"info","message":"vote for location","timestamp":"2015-09-06T21:47:12.659Z"}
+{"location":4,"group":1,"player":3,"value":true,"level":"info","message":"vote for location","timestamp":"2015-09-06T21:47:14.230Z"}
+{"location":4,"group":1,"player":3,"value":false,"level":"info","message":"vote for location","timestamp":"2015-09-06T21:47:15.060Z"}
+{"location":4,"group":1,"player":3,"value":true,"level":"info","message":"vote for location","timestamp":"2015-09-06T21:47:15.828Z"}
+{"location":4,"group":1,"player":3,"value":false,"level":"info","message":"vote for location","timestamp":"2015-09-06T21:47:16.299Z"}
+{"location":4,"group":1,"player":3,"value":true,"level":"info","message":"vote for location","timestamp":"2015-09-06T21:47:16.622Z"}
+{"location":4,"group":1,"player":3,"value":false,"level":"info","message":"vote for location","timestamp":"2015-09-06T21:47:16.822Z"}
+{"location":4,"group":1,"player":3,"value":true,"level":"info","message":"vote for location","timestamp":"2015-09-06T21:47:17.034Z"}
+{"location":4,"group":1,"player":3,"value":false,"level":"info","message":"vote for location","timestamp":"2015-09-06T21:47:17.195Z"}
+{"location":4,"group":1,"player":3,"value":true,"level":"info","message":"vote for location","timestamp":"2015-09-06T21:47:17.377Z"}
+{"location":4,"group":1,"player":3,"value":false,"level":"info","message":"vote for location","timestamp":"2015-09-06T21:47:17.530Z"}
+{"location":4,"group":1,"player":3,"value":true,"level":"info","message":"vote for location","timestamp":"2015-09-06T21:47:18.816Z"}
+{"location":4,"group":1,"player":3,"value":false,"level":"info","message":"vote for location","timestamp":"2015-09-06T21:47:24.641Z"}
+{"button":"card","cardBtn":false,"heartBtn":true,"hotelsBtn":false,"attractionBtn":true,"level":"info","message":"filtrate location","timestamp":"2015-09-06T21:47:30.461Z"}
+{"button":"heart","cardBtn":false,"heartBtn":false,"hotelsBtn":false,"attractionBtn":true,"level":"info","message":"filtrate location","timestamp":"2015-09-06T21:47:30.853Z"}
+{"location":12,"player":3,"group":1,"level":"info","message":"choose the location","timestamp":"2015-09-06T21:47:33.727Z"}
+{"button":"heart","cardBtn":false,"heartBtn":true,"hotelsBtn":false,"attractionBtn":true,"level":"info","message":"filtrate location","timestamp":"2015-09-06T21:47:36.468Z"}
+{"button":"card","cardBtn":true,"heartBtn":true,"hotelsBtn":false,"attractionBtn":true,"level":"info","message":"filtrate location","timestamp":"2015-09-06T21:47:37.232Z"}
+{"location":12,"group":1,"player":3,"value":true,"level":"info","message":"vote for location","timestamp":"2015-09-06T21:48:07.066Z"}
+{"location":12,"group":1,"player":3,"value":false,"level":"info","message":"vote for location","timestamp":"2015-09-06T21:48:20.468Z"}
+{"location":12,"group":1,"player":3,"value":true,"level":"info","message":"vote for location","timestamp":"2015-09-06T21:48:24.062Z"}
+{"location":"location2","level":"info","message":"touch a location card","timestamp":"2015-09-06T21:48:46.291Z"}
+{"location":2,"player":1,"group":1,"level":"info","message":"choose the location","timestamp":"2015-09-06T21:48:50.283Z"}
+{"location":2,"group":1,"player":1,"value":false,"level":"info","message":"vote for location","timestamp":"2015-09-06T21:48:57.023Z"}
+{"location":2,"group":1,"player":1,"value":true,"level":"info","message":"vote for location","timestamp":"2015-09-06T21:49:01.483Z"}
+{"location":2,"group":1,"player":1,"value":false,"level":"info","message":"vote for location","timestamp":"2015-09-06T21:49:05.506Z"}
+{"location":3,"player":1,"group":1,"level":"info","message":"choose the location","timestamp":"2015-09-06T21:49:12.914Z"}
+{"location":3,"group":1,"player":1,"value":false,"level":"info","message":"vote for location","timestamp":"2015-09-06T21:49:17.513Z"}
+{"location":3,"group":1,"player":1,"value":true,"level":"info","message":"vote for location","timestamp":"2015-09-06T21:49:23.614Z"}
+{"location":3,"group":1,"player":1,"value":false,"level":"info","message":"vote for location","timestamp":"2015-09-06T21:49:28.826Z"}
+{"button":"heart","cardBtn":true,"heartBtn":false,"hotelsBtn":false,"attractionBtn":true,"level":"info","message":"filtrate location","timestamp":"2015-09-06T21:49:31.000Z"}
+{"location":4,"player":1,"group":1,"level":"info","message":"choose the location","timestamp":"2015-09-06T21:49:36.705Z"}
+{"button":"heart","cardBtn":true,"heartBtn":true,"hotelsBtn":false,"attractionBtn":true,"level":"info","message":"filtrate location","timestamp":"2015-09-06T21:49:37.977Z"}
+{"location":4,"group":1,"player":1,"value":true,"level":"info","message":"vote for location","timestamp":"2015-09-06T21:49:44.533Z"}
+{"location":4,"group":1,"player":1,"value":false,"level":"info","message":"vote for location","timestamp":"2015-09-06T21:50:58.017Z"}
+{"button":"heart","cardBtn":true,"heartBtn":false,"hotelsBtn":false,"attractionBtn":true,"level":"info","message":"filtrate location","timestamp":"2015-09-06T21:51:05.187Z"}
+{"location":2,"player":1,"group":1,"level":"info","message":"choose the location","timestamp":"2015-09-06T21:51:07.950Z"}
+{"button":"heart","cardBtn":true,"heartBtn":true,"hotelsBtn":false,"attractionBtn":true,"level":"info","message":"filtrate location","timestamp":"2015-09-06T21:51:09.335Z"}
+{"location":2,"group":1,"player":1,"value":true,"level":"info","message":"vote for location","timestamp":"2015-09-06T21:51:15.071Z"}
+{"location":2,"group":1,"player":1,"value":false,"level":"info","message":"vote for location","timestamp":"2015-09-06T21:51:22.198Z"}
+{"location":2,"group":1,"player":1,"value":true,"level":"info","message":"vote for location","timestamp":"2015-09-06T21:51:22.932Z"}
+{"button":"heart","cardBtn":true,"heartBtn":false,"hotelsBtn":false,"attractionBtn":true,"level":"info","message":"filtrate location","timestamp":"2015-09-06T21:51:27.045Z"}
+{"location":3,"player":1,"group":1,"level":"info","message":"choose the location","timestamp":"2015-09-06T21:51:29.393Z"}
+{"button":"heart","cardBtn":true,"heartBtn":true,"hotelsBtn":false,"attractionBtn":true,"level":"info","message":"filtrate location","timestamp":"2015-09-06T21:51:30.619Z"}
+{"location":3,"group":1,"player":1,"value":true,"level":"info","message":"vote for location","timestamp":"2015-09-06T21:51:33.305Z"}
+{"location":3,"group":1,"player":1,"value":false,"level":"info","message":"vote for location","timestamp":"2015-09-06T21:51:34.174Z"}
+{"location":3,"group":1,"player":1,"value":true,"level":"info","message":"vote for location","timestamp":"2015-09-06T21:51:35.250Z"}
+{"location":3,"group":1,"player":1,"value":false,"level":"info","message":"vote for location","timestamp":"2015-09-06T21:51:35.997Z"}
+{"button":"card","cardBtn":false,"heartBtn":true,"hotelsBtn":false,"attractionBtn":true,"level":"info","message":"filtrate location","timestamp":"2015-09-06T21:51:40.183Z"}
+{"button":"heart","cardBtn":false,"heartBtn":false,"hotelsBtn":false,"attractionBtn":true,"level":"info","message":"filtrate location","timestamp":"2015-09-06T21:51:41.908Z"}
+{"location":15,"player":1,"group":1,"level":"info","message":"choose the location","timestamp":"2015-09-06T21:51:45.470Z"}
+{"button":"heart","cardBtn":false,"heartBtn":true,"hotelsBtn":false,"attractionBtn":true,"level":"info","message":"filtrate location","timestamp":"2015-09-06T21:51:46.618Z"}
+{"button":"heart","cardBtn":false,"heartBtn":false,"hotelsBtn":false,"attractionBtn":true,"level":"info","message":"filtrate location","timestamp":"2015-09-06T21:51:47.463Z"}
+{"button":"heart","cardBtn":false,"heartBtn":true,"hotelsBtn":false,"attractionBtn":true,"level":"info","message":"filtrate location","timestamp":"2015-09-06T21:51:48.308Z"}
+{"button":"card","cardBtn":true,"heartBtn":true,"hotelsBtn":false,"attractionBtn":true,"level":"info","message":"filtrate location","timestamp":"2015-09-06T21:51:49.028Z"}
+{"location":15,"group":1,"player":1,"value":true,"level":"info","message":"vote for location","timestamp":"2015-09-06T21:51:51.986Z"}
+{"location":15,"group":1,"player":1,"value":false,"level":"info","message":"vote for location","timestamp":"2015-09-06T21:51:52.843Z"}
+{"location":15,"group":1,"player":1,"value":true,"level":"info","message":"vote for location","timestamp":"2015-09-06T21:51:53.490Z"}
+{"location":15,"group":1,"player":1,"value":false,"level":"info","message":"vote for location","timestamp":"2015-09-06T21:51:55.126Z"}
+{"button":"hotels","cardBtn":true,"heartBtn":true,"hotelsBtn":true,"attractionBtn":true,"level":"info","message":"filtrate location","timestamp":"2015-09-06T21:54:22.006Z"}
+{"location":16,"player":1,"group":1,"level":"info","message":"choose the location","timestamp":"2015-09-06T21:54:28.121Z"}
+{"id":"note_1_16_1_1","location":16,"player":1,"notes":6,"level":"info","message":"delete note","timestamp":"2015-09-06T21:54:33.832Z"}
+{"location":16,"group":1,"player":1,"value":false,"level":"info","message":"vote for location","timestamp":"2015-09-06T21:54:38.449Z"}
+{"location":16,"group":1,"player":1,"value":true,"level":"info","message":"vote for location","timestamp":"2015-09-06T21:54:45.563Z"}
+{"location":16,"group":1,"player":1,"value":false,"level":"info","message":"vote for location","timestamp":"2015-09-06T21:56:32.810Z"}
+{"button":"heart","cardBtn":true,"heartBtn":false,"hotelsBtn":true,"attractionBtn":true,"level":"info","message":"filtrate location","timestamp":"2015-09-06T21:56:42.039Z"}
+{"button":"attractions","cardBtn":true,"heartBtn":false,"hotelsBtn":true,"attractionBtn":false,"level":"info","message":"filtrate location","timestamp":"2015-09-06T21:56:44.604Z"}
+{"location":16,"player":1,"group":1,"level":"info","message":"choose the location","timestamp":"2015-09-06T21:56:53.404Z"}
+{"button":"attractions","cardBtn":true,"heartBtn":false,"hotelsBtn":true,"attractionBtn":true,"level":"info","message":"filtrate location","timestamp":"2015-09-06T21:56:56.955Z"}
+{"button":"heart","cardBtn":true,"heartBtn":true,"hotelsBtn":true,"attractionBtn":true,"level":"info","message":"filtrate location","timestamp":"2015-09-06T21:56:58.631Z"}
+{"location":16,"group":1,"player":1,"value":true,"level":"info","message":"vote for location","timestamp":"2015-09-06T21:57:05.103Z"}
+{"location":16,"group":1,"player":1,"value":false,"level":"info","message":"vote for location","timestamp":"2015-09-06T21:57:06.511Z"}
+{"location":16,"group":1,"player":1,"value":true,"level":"info","message":"vote for location","timestamp":"2015-09-06T21:57:11.865Z"}
+{"button":"card","cardBtn":false,"heartBtn":true,"hotelsBtn":true,"attractionBtn":true,"level":"info","message":"filtrate location","timestamp":"2015-09-06T21:57:14.773Z"}
+{"button":"heart","cardBtn":false,"heartBtn":false,"hotelsBtn":true,"attractionBtn":true,"level":"info","message":"filtrate location","timestamp":"2015-09-06T21:57:15.461Z"}
+{"location":22,"player":1,"group":1,"level":"info","message":"choose the location","timestamp":"2015-09-06T21:57:18.128Z"}
+{"button":"heart","cardBtn":false,"heartBtn":true,"hotelsBtn":true,"attractionBtn":true,"level":"info","message":"filtrate location","timestamp":"2015-09-06T21:57:21.279Z"}
+{"button":"card","cardBtn":true,"heartBtn":true,"hotelsBtn":true,"attractionBtn":true,"level":"info","message":"filtrate location","timestamp":"2015-09-06T21:57:22.587Z"}
+{"location":22,"group":1,"player":1,"value":false,"level":"info","message":"vote for location","timestamp":"2015-09-06T21:57:25.372Z"}
+{"location":22,"group":1,"player":1,"value":true,"level":"info","message":"vote for location","timestamp":"2015-09-06T22:01:18.909Z"}
+{"location":22,"group":1,"player":1,"value":false,"level":"info","message":"vote for location","timestamp":"2015-09-06T22:01:20.475Z"}
+{"location":22,"group":1,"player":1,"value":true,"level":"info","message":"vote for location","timestamp":"2015-09-06T22:01:21.540Z"}
+{"location":22,"group":1,"player":1,"value":false,"level":"info","message":"vote for location","timestamp":"2015-09-06T22:01:22.534Z"}
+{"button":"card","cardBtn":false,"heartBtn":true,"hotelsBtn":true,"attractionBtn":true,"level":"info","message":"filtrate location","timestamp":"2015-09-06T22:01:29.977Z"}
+{"button":"attractions","cardBtn":false,"heartBtn":true,"hotelsBtn":true,"attractionBtn":false,"level":"info","message":"filtrate location","timestamp":"2015-09-06T22:01:30.795Z"}
+{"button":"heart","cardBtn":false,"heartBtn":false,"hotelsBtn":true,"attractionBtn":false,"level":"info","message":"filtrate location","timestamp":"2015-09-06T22:01:32.653Z"}
+{"location":18,"player":1,"group":1,"level":"info","message":"choose the location","timestamp":"2015-09-06T22:01:35.196Z"}
+{"button":"heart","cardBtn":false,"heartBtn":true,"hotelsBtn":true,"attractionBtn":false,"level":"info","message":"filtrate location","timestamp":"2015-09-06T22:01:38.909Z"}
+{"button":"card","cardBtn":true,"heartBtn":true,"hotelsBtn":true,"attractionBtn":false,"level":"info","message":"filtrate location","timestamp":"2015-09-06T22:01:40.199Z"}
+{"button":"attractions","cardBtn":true,"heartBtn":true,"hotelsBtn":true,"attractionBtn":true,"level":"info","message":"filtrate location","timestamp":"2015-09-06T22:01:41.678Z"}
+{"location":18,"group":1,"player":1,"value":true,"level":"info","message":"vote for location","timestamp":"2015-09-06T22:01:50.699Z"}
+{"location":18,"group":1,"player":1,"value":false,"level":"info","message":"vote for location","timestamp":"2015-09-06T22:03:59.290Z"}
+{"location":18,"group":1,"player":1,"value":true,"level":"info","message":"vote for location","timestamp":"2015-09-06T22:04:15.411Z"}
+{"location":18,"group":1,"player":1,"value":false,"level":"info","message":"vote for location","timestamp":"2015-09-06T22:04:16.840Z"}
+{"button":"hotels","cardBtn":true,"heartBtn":true,"hotelsBtn":false,"attractionBtn":true,"level":"info","message":"filtrate location","timestamp":"2015-09-06T22:05:25.686Z"}
+{"button":"hotels","cardBtn":true,"heartBtn":true,"hotelsBtn":true,"attractionBtn":true,"level":"info","message":"filtrate location","timestamp":"2015-09-06T22:05:26.347Z"}
+{"button":"heart","cardBtn":true,"heartBtn":false,"hotelsBtn":true,"attractionBtn":true,"level":"info","message":"filtrate location","timestamp":"2015-09-06T22:05:28.005Z"}
+{"button":"card","cardBtn":false,"heartBtn":false,"hotelsBtn":true,"attractionBtn":true,"level":"info","message":"filtrate location","timestamp":"2015-09-06T22:05:28.431Z"}
+{"location":21,"player":1,"group":1,"level":"info","message":"choose the location","timestamp":"2015-09-06T22:05:39.834Z"}
+{"button":"heart","cardBtn":false,"heartBtn":true,"hotelsBtn":true,"attractionBtn":true,"level":"info","message":"filtrate location","timestamp":"2015-09-06T22:05:42.983Z"}
+{"button":"card","cardBtn":true,"heartBtn":true,"hotelsBtn":true,"attractionBtn":true,"level":"info","message":"filtrate location","timestamp":"2015-09-06T22:05:44.440Z"}
+{"location":21,"group":1,"player":1,"value":true,"level":"info","message":"vote for location","timestamp":"2015-09-06T22:05:50.669Z"}
+{"button":"hotels","cardBtn":true,"heartBtn":true,"hotelsBtn":false,"attractionBtn":true,"level":"info","message":"filtrate location","timestamp":"2015-09-06T22:06:09.993Z"}
+{"button":"hotels","cardBtn":true,"heartBtn":true,"hotelsBtn":true,"attractionBtn":true,"level":"info","message":"filtrate location","timestamp":"2015-09-06T22:06:11.835Z"}
+{"button":"heart","cardBtn":true,"heartBtn":false,"hotelsBtn":true,"attractionBtn":true,"level":"info","message":"filtrate location","timestamp":"2015-09-06T22:06:12.462Z"}
+{"location":23,"player":1,"group":1,"level":"info","message":"choose the location","timestamp":"2015-09-06T22:06:15.830Z"}
+{"button":"heart","cardBtn":true,"heartBtn":true,"hotelsBtn":true,"attractionBtn":true,"level":"info","message":"filtrate location","timestamp":"2015-09-06T22:06:18.536Z"}
+{"location":23,"group":1,"player":1,"value":false,"level":"info","message":"vote for location","timestamp":"2015-09-06T22:06:22.878Z"}
+{"location":23,"group":1,"player":1,"value":true,"level":"info","message":"vote for location","timestamp":"2015-09-06T22:06:28.676Z"}
+{"location":23,"group":1,"player":1,"value":false,"level":"info","message":"vote for location","timestamp":"2015-09-06T22:06:31.470Z"}
+{"location":23,"group":1,"player":1,"value":true,"level":"info","message":"vote for location","timestamp":"2015-09-06T22:06:32.195Z"}
+{"location":23,"group":1,"player":1,"value":false,"level":"info","message":"vote for location","timestamp":"2015-09-06T22:06:32.992Z"}
+{"location":23,"group":1,"player":1,"value":true,"level":"info","message":"vote for location","timestamp":"2015-09-06T22:06:44.630Z"}
+{"location":23,"group":1,"player":1,"value":false,"level":"info","message":"vote for location","timestamp":"2015-09-06T22:06:45.202Z"}
+{"location":21,"player":1,"group":1,"level":"info","message":"choose the location","timestamp":"2015-09-06T22:06:49.553Z"}
+{"location":21,"group":1,"player":1,"value":false,"level":"info","message":"vote for location","timestamp":"2015-09-06T22:06:54.053Z"}
+{"location":16,"player":1,"group":1,"level":"info","message":"choose the location","timestamp":"2015-09-06T22:06:58.868Z"}
+{"location":16,"group":1,"player":1,"value":false,"level":"info","message":"vote for location","timestamp":"2015-09-06T22:07:03.272Z"}
+{"location":"location12","level":"info","message":"touch a location card","timestamp":"2015-09-06T22:07:07.996Z"}
+{"location":"location2","level":"info","message":"touch a location card","timestamp":"2015-09-06T22:07:09.009Z"}
+{"location":"location2","level":"info","message":"touch a location card","timestamp":"2015-09-06T22:07:09.011Z"}
+{"button":"heart","cardBtn":true,"heartBtn":false,"hotelsBtn":true,"attractionBtn":true,"level":"info","message":"filtrate location","timestamp":"2015-09-06T22:07:22.214Z"}
+{"location":20,"player":1,"group":1,"level":"info","message":"choose the location","timestamp":"2015-09-06T22:07:40.499Z"}
+{"button":"heart","cardBtn":true,"heartBtn":true,"hotelsBtn":true,"attractionBtn":true,"level":"info","message":"filtrate location","timestamp":"2015-09-06T22:07:41.687Z"}
+{"location":20,"group":1,"player":1,"value":true,"level":"info","message":"vote for location","timestamp":"2015-09-06T22:07:49.247Z"}
+{"location":20,"group":1,"player":1,"value":false,"level":"info","message":"vote for location","timestamp":"2015-09-06T22:07:51.624Z"}
+{"location":20,"group":1,"player":1,"value":true,"level":"info","message":"vote for location","timestamp":"2015-09-06T22:07:52.294Z"}
+{"location":"location20","level":"info","message":"touch a location card","timestamp":"2015-09-06T22:07:54.529Z"}
+{"level":"info","message":"Experiment Starts!!!!","timestamp":"2015-09-06T22:08:34.496Z"}
+{"button":"hotels","cardBtn":false,"heartBtn":false,"hotelsBtn":true,"attractionBtn":false,"level":"info","message":"filtrate location","timestamp":"2015-09-06T22:09:15.532Z"}
+{"location":17,"player":1,"group":1,"level":"info","message":"choose the location","timestamp":"2015-09-06T22:09:18.272Z"}
+{"button":"heart","cardBtn":false,"heartBtn":true,"hotelsBtn":true,"attractionBtn":false,"level":"info","message":"filtrate location","timestamp":"2015-09-06T22:09:20.348Z"}
+{"location":17,"group":1,"player":1,"value":true,"level":"info","message":"vote for location","timestamp":"2015-09-06T22:09:23.340Z"}
+{"button":"card","cardBtn":true,"heartBtn":true,"hotelsBtn":true,"attractionBtn":false,"level":"info","message":"filtrate location","timestamp":"2015-09-06T22:09:37.243Z"}
+{"button":"heart","cardBtn":true,"heartBtn":false,"hotelsBtn":true,"attractionBtn":false,"level":"info","message":"filtrate location","timestamp":"2015-09-06T22:09:39.559Z"}
+{"location":18,"player":1,"group":1,"level":"info","message":"choose the location","timestamp":"2015-09-06T22:09:42.659Z"}
+{"button":"card","cardBtn":false,"heartBtn":false,"hotelsBtn":true,"attractionBtn":false,"level":"info","message":"filtrate location","timestamp":"2015-09-06T22:09:44.235Z"}
+{"button":"heart","cardBtn":false,"heartBtn":true,"hotelsBtn":true,"attractionBtn":false,"level":"info","message":"filtrate location","timestamp":"2015-09-06T22:09:45.502Z"}
+{"button":"card","cardBtn":true,"heartBtn":true,"hotelsBtn":true,"attractionBtn":false,"level":"info","message":"filtrate location","timestamp":"2015-09-06T22:09:46.576Z"}
+{"location":18,"group":1,"player":1,"value":false,"level":"info","message":"vote for location","timestamp":"2015-09-06T22:09:49.340Z"}
+{"location":18,"group":1,"player":1,"value":true,"level":"info","message":"vote for location","timestamp":"2015-09-06T22:09:52.760Z"}
+{"location":18,"group":1,"player":1,"value":false,"level":"info","message":"vote for location","timestamp":"2015-09-06T22:10:34.863Z"}
+{"location":18,"group":1,"player":1,"value":true,"level":"info","message":"vote for location","timestamp":"2015-09-06T22:10:37.851Z"}
+{"button":"heart","cardBtn":true,"heartBtn":false,"hotelsBtn":true,"attractionBtn":false,"level":"info","message":"filtrate location","timestamp":"2015-09-06T22:10:52.290Z"}
+{"location":18,"player":1,"group":1,"level":"info","message":"choose the location","timestamp":"2015-09-06T22:10:54.329Z"}
+{"location":"location18","level":"info","message":"touch a location card","timestamp":"2015-09-06T22:10:56.935Z"}
+{"location":"location18","level":"info","message":"touch a location card","timestamp":"2015-09-06T22:10:57.784Z"}
+{"location":"location18","level":"info","message":"touch a location card","timestamp":"2015-09-06T22:10:57.787Z"}
+{"location":"location17","level":"info","message":"touch a location card","timestamp":"2015-09-06T22:10:59.463Z"}
+{"location":"location18","level":"info","message":"touch a location card","timestamp":"2015-09-06T22:11:00.208Z"}
+{"location":"location18","level":"info","message":"touch a location card","timestamp":"2015-09-06T22:11:00.209Z"}
+{"location":"location18","level":"info","message":"touch a location card","timestamp":"2015-09-06T22:11:00.209Z"}
+{"location":16,"player":1,"group":1,"level":"info","message":"choose the location","timestamp":"2015-09-06T22:11:02.118Z"}
+{"button":"heart","cardBtn":true,"heartBtn":true,"hotelsBtn":true,"attractionBtn":false,"level":"info","message":"filtrate location","timestamp":"2015-09-06T22:11:04.140Z"}
+{"location":16,"group":1,"player":1,"value":false,"level":"info","message":"vote for location","timestamp":"2015-09-06T22:11:12.047Z"}
+{"location":16,"group":1,"player":1,"value":true,"level":"info","message":"vote for location","timestamp":"2015-09-06T22:11:49.072Z"}
+{"location":16,"group":1,"player":1,"value":false,"level":"info","message":"vote for location","timestamp":"2015-09-06T22:13:10.565Z"}
+{"button":"heart","cardBtn":true,"heartBtn":false,"hotelsBtn":true,"attractionBtn":false,"level":"info","message":"filtrate location","timestamp":"2015-09-06T22:13:38.490Z"}
+{"button":"heart","cardBtn":true,"heartBtn":true,"hotelsBtn":true,"attractionBtn":false,"level":"info","message":"filtrate location","timestamp":"2015-09-06T22:13:39.328Z"}
+{"button":"heart","cardBtn":true,"heartBtn":false,"hotelsBtn":true,"attractionBtn":false,"level":"info","message":"filtrate location","timestamp":"2015-09-06T22:13:40.690Z"}
+{"button":"heart","cardBtn":true,"heartBtn":true,"hotelsBtn":true,"attractionBtn":false,"level":"info","message":"filtrate location","timestamp":"2015-09-06T22:13:41.412Z"}
+{"button":"card","cardBtn":false,"heartBtn":true,"hotelsBtn":true,"attractionBtn":false,"level":"info","message":"filtrate location","timestamp":"2015-09-06T22:13:44.164Z"}
+{"button":"card","cardBtn":true,"heartBtn":true,"hotelsBtn":true,"attractionBtn":false,"level":"info","message":"filtrate location","timestamp":"2015-09-06T22:13:44.784Z"}
+{"button":"attractions","cardBtn":true,"heartBtn":true,"hotelsBtn":true,"attractionBtn":true,"level":"info","message":"filtrate location","timestamp":"2015-09-06T22:13:46.106Z"}
+{"button":"heart","cardBtn":true,"heartBtn":false,"hotelsBtn":true,"attractionBtn":true,"level":"info","message":"filtrate location","timestamp":"2015-09-06T22:13:47.923Z"}
+{"button":"heart","cardBtn":true,"heartBtn":true,"hotelsBtn":true,"attractionBtn":true,"level":"info","message":"filtrate location","timestamp":"2015-09-06T22:13:50.097Z"}
+{"button":"heart","cardBtn":true,"heartBtn":false,"hotelsBtn":true,"attractionBtn":true,"level":"info","message":"filtrate location","timestamp":"2015-09-06T22:14:07.879Z"}
+{"button":"heart","cardBtn":true,"heartBtn":true,"hotelsBtn":true,"attractionBtn":true,"level":"info","message":"filtrate location","timestamp":"2015-09-06T22:14:10.150Z"}
+{"button":"heart","cardBtn":true,"heartBtn":false,"hotelsBtn":true,"attractionBtn":true,"level":"info","message":"filtrate location","timestamp":"2015-09-06T22:14:12.751Z"}
+{"button":"heart","cardBtn":true,"heartBtn":true,"hotelsBtn":true,"attractionBtn":true,"level":"info","message":"filtrate location","timestamp":"2015-09-06T22:14:42.699Z"}
+{"button":"heart","cardBtn":true,"heartBtn":false,"hotelsBtn":true,"attractionBtn":true,"level":"info","message":"filtrate location","timestamp":"2015-09-06T22:15:34.232Z"}
+{"button":"heart","cardBtn":true,"heartBtn":true,"hotelsBtn":true,"attractionBtn":true,"level":"info","message":"filtrate location","timestamp":"2015-09-06T22:15:39.093Z"}
+{"location":16,"group":1,"player":1,"value":true,"level":"info","message":"vote for location","timestamp":"2015-09-06T22:16:34.489Z"}
+{"button":"heart","cardBtn":true,"heartBtn":false,"hotelsBtn":true,"attractionBtn":true,"level":"info","message":"filtrate location","timestamp":"2015-09-06T22:16:48.069Z"}
+{"button":"heart","cardBtn":true,"heartBtn":true,"hotelsBtn":true,"attractionBtn":true,"level":"info","message":"filtrate location","timestamp":"2015-09-06T22:16:48.732Z"}
+{"location":16,"group":1,"player":1,"value":false,"level":"info","message":"vote for location","timestamp":"2015-09-06T22:16:56.386Z"}
+{"location":16,"group":1,"player":1,"value":true,"level":"info","message":"vote for location","timestamp":"2015-09-06T22:16:59.978Z"}
+{"location":16,"group":1,"player":1,"value":false,"level":"info","message":"vote for location","timestamp":"2015-09-06T22:17:00.737Z"}
+{"location":16,"group":1,"player":1,"value":true,"level":"info","message":"vote for location","timestamp":"2015-09-06T22:17:01.268Z"}
+{"location":16,"group":1,"player":1,"value":false,"level":"info","message":"vote for location","timestamp":"2015-09-06T22:17:01.812Z"}
+{"location":16,"group":1,"player":1,"value":true,"level":"info","message":"vote for location","timestamp":"2015-09-06T22:17:02.342Z"}
+{"button":"hotels","cardBtn":true,"heartBtn":true,"hotelsBtn":false,"attractionBtn":true,"level":"info","message":"filtrate location","timestamp":"2015-09-06T22:17:07.476Z"}
+{"button":"hotels","cardBtn":true,"heartBtn":true,"hotelsBtn":true,"attractionBtn":true,"level":"info","message":"filtrate location","timestamp":"2015-09-06T22:17:08.304Z"}
+{"button":"heart","cardBtn":true,"heartBtn":false,"hotelsBtn":true,"attractionBtn":true,"level":"info","message":"filtrate location","timestamp":"2015-09-06T22:17:10.342Z"}
+{"location":22,"player":1,"group":1,"level":"info","message":"choose the location","timestamp":"2015-09-06T22:17:12.663Z"}
+{"button":"card","cardBtn":false,"heartBtn":false,"hotelsBtn":true,"attractionBtn":true,"level":"info","message":"filtrate location","timestamp":"2015-09-06T22:17:14.724Z"}
+{"button":"heart","cardBtn":false,"heartBtn":true,"hotelsBtn":true,"attractionBtn":true,"level":"info","message":"filtrate location","timestamp":"2015-09-06T22:17:16.093Z"}
+{"button":"card","cardBtn":true,"heartBtn":true,"hotelsBtn":true,"attractionBtn":true,"level":"info","message":"filtrate location","timestamp":"2015-09-06T22:17:19.970Z"}
+{"button":"attractions","cardBtn":true,"heartBtn":true,"hotelsBtn":true,"attractionBtn":false,"level":"info","message":"filtrate location","timestamp":"2015-09-06T22:17:20.864Z"}
+{"location":22,"group":1,"player":1,"value":false,"level":"info","message":"vote for location","timestamp":"2015-09-06T22:17:26.327Z"}
+{"location":22,"group":1,"player":1,"value":true,"level":"info","message":"vote for location","timestamp":"2015-09-06T22:17:36.254Z"}
+{"button":"heart","cardBtn":true,"heartBtn":false,"hotelsBtn":true,"attractionBtn":false,"level":"info","message":"filtrate location","timestamp":"2015-09-06T22:17:51.772Z"}
+{"location":18,"player":1,"group":1,"level":"info","message":"choose the location","timestamp":"2015-09-06T22:17:54.795Z"}
+{"button":"card","cardBtn":false,"heartBtn":false,"hotelsBtn":true,"attractionBtn":false,"level":"info","message":"filtrate location","timestamp":"2015-09-06T22:17:56.700Z"}
+{"button":"heart","cardBtn":false,"heartBtn":true,"hotelsBtn":true,"attractionBtn":false,"level":"info","message":"filtrate location","timestamp":"2015-09-06T22:17:57.589Z"}
+{"button":"card","cardBtn":true,"heartBtn":true,"hotelsBtn":true,"attractionBtn":false,"level":"info","message":"filtrate location","timestamp":"2015-09-06T22:17:58.504Z"}
+{"button":"heart","cardBtn":true,"heartBtn":false,"hotelsBtn":true,"attractionBtn":false,"level":"info","message":"filtrate location","timestamp":"2015-09-06T22:18:06.687Z"}
+{"location":19,"player":1,"group":1,"level":"info","message":"choose the location","timestamp":"2015-09-06T22:18:10.161Z"}
+{"button":"heart","cardBtn":true,"heartBtn":true,"hotelsBtn":true,"attractionBtn":false,"level":"info","message":"filtrate location","timestamp":"2015-09-06T22:18:11.320Z"}
+{"location":19,"group":1,"player":1,"value":false,"level":"info","message":"vote for location","timestamp":"2015-09-06T22:18:17.371Z"}
+{"location":19,"group":1,"player":1,"value":true,"level":"info","message":"vote for location","timestamp":"2015-09-06T22:18:20.709Z"}
+{"button":"heart","cardBtn":true,"heartBtn":false,"hotelsBtn":true,"attractionBtn":false,"level":"info","message":"filtrate location","timestamp":"2015-09-06T22:18:30.839Z"}
+{"button":"heart","cardBtn":true,"heartBtn":true,"hotelsBtn":true,"attractionBtn":false,"level":"info","message":"filtrate location","timestamp":"2015-09-06T22:18:31.585Z"}
+{"button":"heart","cardBtn":true,"heartBtn":false,"hotelsBtn":true,"attractionBtn":false,"level":"info","message":"filtrate location","timestamp":"2015-09-06T22:18:32.886Z"}
+{"button":"heart","cardBtn":true,"heartBtn":true,"hotelsBtn":true,"attractionBtn":false,"level":"info","message":"filtrate location","timestamp":"2015-09-06T22:18:33.643Z"}
+{"button":"heart","cardBtn":true,"heartBtn":false,"hotelsBtn":true,"attractionBtn":false,"level":"info","message":"filtrate location","timestamp":"2015-09-06T22:18:39.101Z"}
+{"button":"heart","cardBtn":true,"heartBtn":true,"hotelsBtn":true,"attractionBtn":false,"level":"info","message":"filtrate location","timestamp":"2015-09-06T22:18:39.857Z"}
+{"location":19,"group":1,"player":1,"value":false,"level":"info","message":"vote for location","timestamp":"2015-09-06T22:19:53.650Z"}
+{"location":19,"group":1,"player":1,"value":true,"level":"info","message":"vote for location","timestamp":"2015-09-06T22:19:54.636Z"}
+{"location":19,"group":1,"player":1,"value":false,"level":"info","message":"vote for location","timestamp":"2015-09-06T22:19:55.582Z"}
+{"location":19,"group":1,"player":1,"value":true,"level":"info","message":"vote for location","timestamp":"2015-09-06T22:19:56.299Z"}
+{"location":19,"group":1,"player":1,"value":false,"level":"info","message":"vote for location","timestamp":"2015-09-06T22:19:57.922Z"}
+{"location":19,"group":1,"player":1,"value":true,"level":"info","message":"vote for location","timestamp":"2015-09-06T22:20:05.511Z"}
+{"button":"heart","cardBtn":true,"heartBtn":false,"hotelsBtn":true,"attractionBtn":false,"level":"info","message":"filtrate location","timestamp":"2015-09-06T22:20:09.276Z"}
+{"location":21,"player":1,"group":1,"level":"info","message":"choose the location","timestamp":"2015-09-06T22:20:13.312Z"}
+{"button":"heart","cardBtn":true,"heartBtn":true,"hotelsBtn":true,"attractionBtn":false,"level":"info","message":"filtrate location","timestamp":"2015-09-06T22:20:15.007Z"}
+{"button":"heart","cardBtn":true,"heartBtn":false,"hotelsBtn":true,"attractionBtn":false,"level":"info","message":"filtrate location","timestamp":"2015-09-06T22:21:52.868Z"}
+{"location":21,"player":1,"group":1,"level":"info","message":"choose the location","timestamp":"2015-09-06T22:21:56.157Z"}
+{"button":"heart","cardBtn":true,"heartBtn":true,"hotelsBtn":true,"attractionBtn":false,"level":"info","message":"filtrate location","timestamp":"2015-09-06T22:21:58.704Z"}
+{"level":"info","message":"Experiment Starts!!!!","timestamp":"2015-09-06T22:29:54.378Z"}
+{"button":"hotels","cardBtn":false,"heartBtn":false,"hotelsBtn":true,"attractionBtn":false,"level":"info","message":"filtrate location","timestamp":"2015-09-06T22:30:16.127Z"}
+{"level":"info","message":"Experiment Starts!!!!","timestamp":"2015-09-06T22:31:11.639Z"}
+{"button":"hotels","cardBtn":false,"heartBtn":false,"hotelsBtn":true,"attractionBtn":false,"level":"info","message":"filtrate location","timestamp":"2015-09-06T22:31:12.729Z"}
+{"location":19,"player":1,"group":1,"level":"info","message":"choose the location","timestamp":"2015-09-06T22:31:15.036Z"}
+{"button":"heart","cardBtn":false,"heartBtn":true,"hotelsBtn":true,"attractionBtn":false,"level":"info","message":"filtrate location","timestamp":"2015-09-06T22:31:16.287Z"}
+{"location":19,"group":1,"player":1,"value":true,"level":"info","message":"vote for location","timestamp":"2015-09-06T22:31:28.722Z"}
+{"button":"card","cardBtn":true,"heartBtn":true,"hotelsBtn":true,"attractionBtn":false,"level":"info","message":"filtrate location","timestamp":"2015-09-06T22:31:33.113Z"}
+{"button":"hotels","cardBtn":true,"heartBtn":true,"hotelsBtn":false,"attractionBtn":false,"level":"info","message":"filtrate location","timestamp":"2015-09-06T22:31:35.767Z"}
+{"button":"hotels","cardBtn":true,"heartBtn":true,"hotelsBtn":true,"attractionBtn":false,"level":"info","message":"filtrate location","timestamp":"2015-09-06T22:31:36.215Z"}
+{"button":"heart","cardBtn":true,"heartBtn":false,"hotelsBtn":true,"attractionBtn":false,"level":"info","message":"filtrate location","timestamp":"2015-09-06T22:31:36.956Z"}
+{"location":22,"player":1,"group":1,"level":"info","message":"choose the location","timestamp":"2015-09-06T22:31:39.164Z"}
+{"button":"card","cardBtn":false,"heartBtn":false,"hotelsBtn":true,"attractionBtn":false,"level":"info","message":"filtrate location","timestamp":"2015-09-06T22:31:40.734Z"}
+{"button":"heart","cardBtn":false,"heartBtn":true,"hotelsBtn":true,"attractionBtn":false,"level":"info","message":"filtrate location","timestamp":"2015-09-06T22:31:41.924Z"}
+{"button":"card","cardBtn":true,"heartBtn":true,"hotelsBtn":true,"attractionBtn":false,"level":"info","message":"filtrate location","timestamp":"2015-09-06T22:31:42.675Z"}
+{"location":22,"group":1,"player":1,"value":false,"level":"info","message":"vote for location","timestamp":"2015-09-06T22:31:46.175Z"}
+{"location":22,"group":1,"player":1,"value":true,"level":"info","message":"vote for location","timestamp":"2015-09-06T22:32:04.459Z"}
+{"button":"hotels","cardBtn":true,"heartBtn":true,"hotelsBtn":false,"attractionBtn":false,"level":"info","message":"filtrate location","timestamp":"2015-09-06T22:32:14.955Z"}
+{"button":"hotels","cardBtn":true,"heartBtn":true,"hotelsBtn":true,"attractionBtn":false,"level":"info","message":"filtrate location","timestamp":"2015-09-06T22:32:16.347Z"}
+{"button":"heart","cardBtn":true,"heartBtn":false,"hotelsBtn":true,"attractionBtn":false,"level":"info","message":"filtrate location","timestamp":"2015-09-06T22:32:19.691Z"}
+{"location":"location19","level":"info","message":"touch a location card","timestamp":"2015-09-06T22:32:25.031Z"}
+{"location":"location19","level":"info","message":"touch a location card","timestamp":"2015-09-06T22:32:26.189Z"}
+{"location":"location19","level":"info","message":"touch a location card","timestamp":"2015-09-06T22:32:26.192Z"}
+{"location":"location22","level":"info","message":"touch a location card","timestamp":"2015-09-06T22:32:28.756Z"}
+{"location":17,"player":1,"group":1,"level":"info","message":"choose the location","timestamp":"2015-09-06T22:32:31.758Z"}
+{"button":"heart","cardBtn":true,"heartBtn":true,"hotelsBtn":true,"attractionBtn":false,"level":"info","message":"filtrate location","timestamp":"2015-09-06T22:32:35.555Z"}
+{"location":17,"group":1,"player":1,"value":false,"level":"info","message":"vote for location","timestamp":"2015-09-06T22:32:53.724Z"}
+{"location":17,"group":1,"player":1,"value":true,"level":"info","message":"vote for location","timestamp":"2015-09-06T22:33:03.209Z"}
+{"location":17,"group":1,"player":1,"value":false,"level":"info","message":"vote for location","timestamp":"2015-09-06T22:33:05.548Z"}
+{"location":17,"group":1,"player":1,"value":true,"level":"info","message":"vote for location","timestamp":"2015-09-06T22:33:06.277Z"}
+{"location":17,"group":1,"player":1,"value":false,"level":"info","message":"vote for location","timestamp":"2015-09-06T22:33:06.712Z"}
+{"location":17,"group":1,"player":1,"value":true,"level":"info","message":"vote for location","timestamp":"2015-09-06T22:33:06.986Z"}
+{"button":"heart","cardBtn":true,"heartBtn":false,"hotelsBtn":true,"attractionBtn":false,"level":"info","message":"filtrate location","timestamp":"2015-09-06T22:33:14.020Z"}
+{"location":20,"player":1,"group":1,"level":"info","message":"choose the location","timestamp":"2015-09-06T22:33:16.412Z"}
+{"button":"heart","cardBtn":true,"heartBtn":true,"hotelsBtn":true,"attractionBtn":false,"level":"info","message":"filtrate location","timestamp":"2015-09-06T22:33:18.934Z"}
+{"location":20,"group":1,"player":1,"value":false,"level":"info","message":"vote for location","timestamp":"2015-09-06T22:33:23.190Z"}
+{"location":20,"group":1,"player":1,"value":true,"level":"info","message":"vote for location","timestamp":"2015-09-06T22:33:24.392Z"}
+{"button":"heart","cardBtn":true,"heartBtn":false,"hotelsBtn":true,"attractionBtn":false,"level":"info","message":"filtrate location","timestamp":"2015-09-06T22:33:38.424Z"}
+{"button":"heart","cardBtn":true,"heartBtn":true,"hotelsBtn":true,"attractionBtn":false,"level":"info","message":"filtrate location","timestamp":"2015-09-06T22:33:38.989Z"}
+{"button":"heart","cardBtn":true,"heartBtn":false,"hotelsBtn":true,"attractionBtn":false,"level":"info","message":"filtrate location","timestamp":"2015-09-06T22:33:39.881Z"}
+{"button":"heart","cardBtn":true,"heartBtn":true,"hotelsBtn":true,"attractionBtn":false,"level":"info","message":"filtrate location","timestamp":"2015-09-06T22:33:40.483Z"}
+{"location":20,"group":1,"player":1,"value":false,"level":"info","message":"vote for location","timestamp":"2015-09-06T22:34:09.780Z"}
+{"location":20,"group":1,"player":1,"value":true,"level":"info","message":"vote for location","timestamp":"2015-09-06T22:34:10.705Z"}
+{"location":20,"group":1,"player":1,"value":false,"level":"info","message":"vote for location","timestamp":"2015-09-06T22:34:13.221Z"}
+{"location":20,"group":1,"player":1,"value":true,"level":"info","message":"vote for location","timestamp":"2015-09-06T22:34:13.988Z"}
+{"button":"heart","cardBtn":true,"heartBtn":false,"hotelsBtn":true,"attractionBtn":false,"level":"info","message":"filtrate location","timestamp":"2015-09-06T22:34:20.439Z"}
+{"location":18,"player":1,"group":1,"level":"info","message":"choose the location","timestamp":"2015-09-06T22:34:25.173Z"}
+{"button":"heart","cardBtn":true,"heartBtn":true,"hotelsBtn":true,"attractionBtn":false,"level":"info","message":"filtrate location","timestamp":"2015-09-06T22:34:27.791Z"}
+{"location":18,"group":1,"player":1,"value":false,"level":"info","message":"vote for location","timestamp":"2015-09-06T22:34:33.449Z"}
+{"location":18,"group":1,"player":1,"value":true,"level":"info","message":"vote for location","timestamp":"2015-09-06T22:34:35.957Z"}
+{"location":18,"group":1,"player":1,"value":false,"level":"info","message":"vote for location","timestamp":"2015-09-06T22:34:38.250Z"}
+{"location":20,"player":1,"group":1,"level":"info","message":"choose the location","timestamp":"2015-09-06T22:34:42.636Z"}
+{"location":20,"group":1,"player":1,"value":false,"level":"info","message":"vote for location","timestamp":"2015-09-06T22:34:47.386Z"}
+{"location":20,"group":1,"player":1,"value":true,"level":"info","message":"vote for location","timestamp":"2015-09-06T22:34:50.281Z"}
+{"button":"hotels","cardBtn":true,"heartBtn":true,"hotelsBtn":false,"attractionBtn":false,"level":"info","message":"filtrate location","timestamp":"2015-09-06T22:34:58.674Z"}
+{"button":"hotels","cardBtn":true,"heartBtn":true,"hotelsBtn":true,"attractionBtn":false,"level":"info","message":"filtrate location","timestamp":"2015-09-06T22:34:59.820Z"}
+{"button":"heart","cardBtn":true,"heartBtn":false,"hotelsBtn":true,"attractionBtn":false,"level":"info","message":"filtrate location","timestamp":"2015-09-06T22:35:00.653Z"}
+{"location":16,"player":1,"group":1,"level":"info","message":"choose the location","timestamp":"2015-09-06T22:35:03.390Z"}
+{"button":"heart","cardBtn":true,"heartBtn":true,"hotelsBtn":true,"attractionBtn":false,"level":"info","message":"filtrate location","timestamp":"2015-09-06T22:35:06.139Z"}
+{"location":16,"group":1,"player":1,"value":false,"level":"info","message":"vote for location","timestamp":"2015-09-06T22:35:09.890Z"}
+{"location":16,"group":1,"player":1,"value":true,"level":"info","message":"vote for location","timestamp":"2015-09-06T22:35:20.984Z"}
+{"location":"location16","level":"info","message":"touch a location card","timestamp":"2015-09-06T22:35:26.437Z"}
+{"location":"location16","level":"info","message":"touch a location card","timestamp":"2015-09-06T22:35:28.188Z"}
+{"location":"location16","level":"info","message":"touch a location card","timestamp":"2015-09-06T22:35:28.192Z"}

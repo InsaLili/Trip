@@ -78,7 +78,10 @@ p{
     margin-left: 20px;
     background-color: #9E9E9E;
 }
-.filter button.actived{
+.filter button:focus,.filter button:hover{
+    background-color: #9E9E9E;
+}
+.filter button.active{
     background-color: #eeeeee;
 }
 .filter .glyphicon-th-large, .kit .glyphicon-heart, #filter .glyphicon-header{
