@@ -7,10 +7,12 @@ $(document).ready(function() {
         return false;
     });
 
-//    var db = new PouchDB('http://134.214.108.42:5984/trip');
-    var db = new PouchDB('http://localhost:5984/trip');
-//    var socket = io.connect('http://134.214.108.42:8000');
-    var socket = io.connect('http://localhost:8000');
+    var db = new PouchDB('http://134.214.108.42:5984/trip');
+//    var db = new PouchDB('http://134.214.198.102:5984/trip');
+//    var db = new PouchDB('http://localhost:5984/trip');
+    var socket = io.connect('http://134.214.108.42:8000');
+//    var socket = io.connect('http://134.214.198.102:8000');
+//    var socket = io.connect('http://localhost:8000');
     var myLayer;
     var groupNumber = 1;
     var locationAmount = 23;

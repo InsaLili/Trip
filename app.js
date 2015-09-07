@@ -15,8 +15,9 @@ var logger = new (winston.Logger)({
 });
 // Database
 var PouchDB = require('pouchdb');
-var db = new PouchDB('http://localhost:5984/trip');
-//var db = new PouchDB('http://134.214.108.42:5984/trip');
+//var db = new PouchDB('http://localhost:5984/trip');
+//var db = new PouchDB('http://134.214.198.102:5984/trip');
+var db = new PouchDB('http://134.214.108.42:5984/trip');
 
 var app = express();
 var routes = require('./routes/index');

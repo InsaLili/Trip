@@ -9,10 +9,12 @@ $(document).ready(function($){
     var like = false;
     var red = '#D00000';
 
-//    var db = new PouchDB('http://134.214.108.42:5984/trip');
-    var db = new PouchDB('http://localhost:5984/trip');
-//    var socket = io.connect('http://134.214.108.4      2:8000');
-    var socket = io.connect('http://localhost:8000');
+    var db = new PouchDB('http://134.214.108.42:5984/trip');
+//    var db = new PouchDB('http://134.214.198.102:5984/trip');
+//    var db = new PouchDB('http://localhost:5984/trip');
+    var socket = io.connect('http://134.214.108.42:8000');
+//    var socket = io.connect('http://134.214.198.102:8000');
+//    var socket = io.connect('http://localhost:8000');
     // Functions =============================================================
     var Client = {
         init: function(){
@@ -54,7 +56,9 @@ $(document).ready(function($){
         //------------------dialog initiation
         dialogInit: function(){
             $( '#chooseLocationDlg' ).dialog({
+                resizable: false,
                 autoOpen: false,
+                width: 600,
                 height:200,
                 modal: true,
                 buttons:{
@@ -278,34 +282,47 @@ $(document).ready(function($){
         },
 
         updateVote: function(value, id){
-            db.put({
-                _id: id,
-                "type": "vote",
-                "group": groupNumber,
-                "location": locationNumber,
-                "player": playerNumber,
-                "vote": value
-            }).then(function() {
+            db.upsert(id, function(doc){
+                return{
+                    "type": "vote",
+                    "group": groupNumber,
+                    "location": locationNumber,
+                    "player": playerNumber,
+                    "vote": value
+                }
+            }).then(function(){
                 socket.emit('vote', {location: locationNumber, group: groupNumber, player: playerNumber, value:value});
             }).catch(function(err){
-                if(err.status == 409){
-                    db.get(id).then(function(doc){
-                        console.log(doc);
-                        socket.emit('vote', {location: locationNumber, group: groupNumber, player: playerNumber, value:value});
-                        return db.put({
-                            _id: id,
-                            _rev: doc._rev,
-                            "type": "vote",
-                            "group": groupNumber,
-                            "location": locationNumber,
-                            "player": playerNumber,
-                            "vote": value
-                        });
-                    });
-                }else{
-                    console.log('other error');
-                }
+                console.log(err);
             });
+//            db.put({
+//                _id: id,
+//                "type": "vote",
+//                "group": groupNumber,
+//                "location": locationNumber,
+//                "player": playerNumber,
+//                "vote": value
+//            }).then(function() {
+//                socket.emit('vote', {location: locationNumber, group: groupNumber, player: playerNumber, value:value});
+//            }).catch(function(err){
+//                if(err.status == 409){
+//                    db.get(id).then(function(doc){
+//                        console.log(doc);
+//                        socket.emit('vote', {location: locationNumber, group: groupNumber, player: playerNumber, value:value});
+//                        return db.put({
+//                            _id: id,
+//                            _rev: doc._rev,
+//                            "type": "vote",
+//                            "group": groupNumber,
+//                            "location": locationNumber,
+//                            "player": playerNumber,
+//                            "vote": value
+//                        });
+//                    });
+//                }else{
+//                    console.log('other error');
+//                }
+//            });
         },
 
         changeColor: function(){
