@@ -7,14 +7,12 @@ $(document).ready(function() {
         return false;
     });
 
-    var db = new PouchDB('http://134.214.108.42:5984/trip');
-//    var db = new PouchDB('http://134.214.198.102:5984/trip');
-//    var db = new PouchDB('http://localhost:5984/trip');
-    var socket = io.connect('http://134.214.108.42:8000');
-//    var socket = io.connect('http://134.214.198.102:8000');
-//    var socket = io.connect('http://localhost:8000');
+//    var db = new PouchDB('http://134.214.108.42:5984/trip');
+    var db = new PouchDB('http://localhost:5984/trip');
+//    var socket = io.connect('http://134.214.108.42:8000');
+    var socket = io.connect('http://localhost:8000');
     var myLayer;
-    var groupNumber = 1;
+    var groupNumber = 8;
     var locationAmount = 23;
     var attractionAmount = 15;
     var cardBtn = false;
@@ -405,6 +403,20 @@ $(document).ready(function() {
                 ($(this).hasClass('active') == true)? $(this).removeClass('active'):$(this).addClass('active');
                 Server.filtrateLocation();
             });
+
+            map.on('zoomend', function(){
+                socket.emit('changeZoom');
+                console.log('change zoom');
+            });
+
+            map.on('dragend', function(){
+                socket.emit('dragend');
+                console.log('drag map');
+            });
+//            map.addListener('dragend', function(){
+//                socket.emit('dragend');
+//                console.log('drag map');
+//            });
         },
 
         //-----------------Add users' notes to the location cards
